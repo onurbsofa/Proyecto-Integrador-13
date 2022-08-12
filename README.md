@@ -7,5 +7,4 @@ Listado de 5 páginas referentes en las que se basa su proyecto:
 4/
 5/
 Listado del grupo con una breve descripción de cada uno
-bruno fazio:
 Link del tablero de trabajo en donde se encuentran trabajando: https://trello.com/b/mIKOjCE5/dh-grupo13-cafe
