@@ -1,6 +1,6 @@
 # Proyecto-Integrador-13
 
-Tematica y descripcion del sitio:ecommerce de café 
+Tematica y descripcion del sitio: ecommerce de venta de café de calidad en grano y/o molido.
 
 Listado de 5 páginas referentes en las que se basa su proyecto:
 1/ https://www.ipsento.com/menus
