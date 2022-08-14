@@ -16,7 +16,7 @@
 
 Martin Leibovici: Soy Argentino, tengo 36 años y soy ingeniero industrial de la UBA. Hace casi diez años trabajo en marketing digital para grandes empresas y también tengo mi propia agencia de marketing. Siempre me interesó la tecnología y los emprendimientos. Me gustan mucho los deportes, mantenerme activo. Amo la música, me gusta ir a recitales y también tocar el piano.
 
-
+William Guaneme: soy colombiano, tengo 28 años soy ingeniero mecánico de la U ECCI, actualmente me desempeño como diseñador de estructuras en el área de ingeniería en una empresa del sector carrocero de buses. Quise empezar este nuevo reto para aportar a mi desarrollo profesional y emprender nuevos proyectos en mi vida. Aficionado al futbol y al ciclismo.
 
 
 
