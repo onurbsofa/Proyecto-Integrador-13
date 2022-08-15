@@ -21,7 +21,8 @@ Bruno Fazio:Buenas! naci en junin por lo tanto soy provinciano, pero todos creen
 
 William Guaneme: soy colombiano, tengo 28 años soy ingeniero mecánico de la U ECCI, actualmente me desempeño como diseñador de estructuras en el área de ingeniería en una empresa del sector carrocero de buses. Quise empezar este nuevo reto para aportar a mi desarrollo profesional y emprender nuevos proyectos en mi vida. Aficionado al futbol y al ciclismo.
 
-
+Federico Mouro: Soy Argentino, tengo 23 años, actualmente trabajo de analista funcional en el ministerio de educación de CABA. Me gustan mucho los deportes, espcialmente el ciclismo por serro o montaña, cosa que trato de hacer todos los findes yendo a conocer lugares. 
+Honestamente me metí en el curso para conseguir un trabajo que me permita estar, dentro de todo, estable economicamente y no sea necesario el 100% de presencialidad (no me gusta mucho estar quieto tantas horas).
 
 - Link del tablero de trabajo en donde se encuentran trabajando: https://trello.com/b/mIKOjCE5/dh-grupo13-cafe
 
