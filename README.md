@@ -27,3 +27,5 @@ Honestamente me metí en el curso para conseguir un trabajo que me permita estar
 - Link del tablero de trabajo en donde se encuentran trabajando: https://trello.com/b/mIKOjCE5/dh-grupo13-cafe
 
 - Figma: https://www.figma.com/file/KGKmj9he5fg9u5CD5rgKrH/DH-grupo13-cafe?node-id=0%3A1
+
+Isabel C. Valencia: Soy Colombiana vivo en Cali , tengo 30 años  estudié contaduría pública  pero me inclino más por la parte de diseño tengo muchas expectativas con este curso ya que quiero dedicarme de lleno a esto, así poder darle un giro a mi vida profesional, economica etc. Me gustan los animales especialmente los perros y los gatos.
