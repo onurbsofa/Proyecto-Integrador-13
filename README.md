@@ -24,8 +24,10 @@ William Guaneme: soy colombiano, tengo 28 años soy ingeniero mecánico de la U 
 Federico Mouro: Soy Argentino, tengo 23 años, actualmente trabajo de analista funcional en el ministerio de educación de CABA. Me gustan mucho los deportes, espcialmente el ciclismo por serro o montaña, cosa que trato de hacer todos los findes yendo a conocer lugares. 
 Honestamente me metí en el curso para conseguir un trabajo que me permita estar, dentro de todo, estable economicamente y no sea necesario el 100% de presencialidad (no me gusta mucho estar quieto tantas horas).
 
+Isabel C. Valencia: Soy Colombiana vivo en Cali , tengo 30 años  estudié contaduría pública  pero me inclino más por la parte de diseño tengo muchas expectativas con este curso ya que quiero dedicarme de lleno a esto, así poder darle un giro a mi vida profesional, economica etc. Me gustan los animales especialmente los perros y los gatos.
+
 - Link del tablero de trabajo en donde se encuentran trabajando: https://trello.com/b/mIKOjCE5/dh-grupo13-cafe
 
 - Figma: https://www.figma.com/file/KGKmj9he5fg9u5CD5rgKrH/DH-grupo13-cafe?node-id=0%3A1
 
-Isabel C. Valencia: Soy Colombiana vivo en Cali , tengo 30 años  estudié contaduría pública  pero me inclino más por la parte de diseño tengo muchas expectativas con este curso ya que quiero dedicarme de lleno a esto, así poder darle un giro a mi vida profesional, economica etc. Me gustan los animales especialmente los perros y los gatos.
+
