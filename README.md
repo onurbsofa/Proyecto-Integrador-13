@@ -1,6 +1,7 @@
 # Proyecto-Integrador-13
 
-- Tematica y descripcion del sitio: ecommerce de venta de café de calidad en grano y molido.
+- Tematica y descripcion del sitio: ecommerce de venta de café de calidad en grano, grano molido, capsula y otras formas de empacado. Estamos evaluando la posibilidad de vender yerba mate para unificar la tematica entre argentina y colombia.
+- publico:Apuntamos a un publico casual que conoce diferentes formas de preparar cafe y busca una forma rapida y eficiente de conseguir el producto en todos sus estados.Ademas de unificar la tematica entre argentina y colombia Tambien para ampliar un poco mas la oferta y demanda de nuestro servicio evaluamos la posibilidad de vender yerba mate con diferentes porcentajes de mateina para que el consumidor elija la mejor opcion y asi tener una solida oferta con variedad de productos y propiedades para elejir.
 
 - Listado de 5 páginas referentes en las que se basa su proyecto:
 1/ https://www.ipsento.com/menus
