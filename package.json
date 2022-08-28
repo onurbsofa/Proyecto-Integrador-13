@@ -1,0 +1,14 @@
+{
+  "name": "root_mercadoliebre",
+  "version": "1.0.0",
+  "description": "clon mercado libre",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Fazio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
