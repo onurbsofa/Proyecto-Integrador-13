@@ -12,3 +12,7 @@ app.listen(3000,function() {
 app.get('/Index', (req,res) => {
     res.sendFile(path.join(__dirname,'./views/index.html'));
 });
+
+app.get('/detalle-producto',(req,res) => {
+    res.sendFile(path.join(__dirname,'/views/detalle-producto.html'))
+})

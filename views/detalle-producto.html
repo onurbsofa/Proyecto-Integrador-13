@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="/css/styles-detalle-producto.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="top-div-image">
+        <div id="top-div">
+            <h2 id="cafe-premium">CAFÉ PREMIUM</h2>
+            <h2 id="sabores">SABORES DE AMÉRICA LATINA</h2>
+            <hr class="under-line">
+        </div>
+    </div>
+
+    <div id="seccion-producto-principal">
+        <div class="seccion-producto-principal-componente-1">
+            <img id="imagen-producto-principal" src = "/img/cafe-bolsa-1.png"></img>
+        </div>
+        <div lass="seccion-producto-principal-componente-2">
+            <div id="caracteristicas-producto">
+                <h2 class="nombre-producto">COLOMBIA BLEND</h2>
+                <hr id="under-line-producto">
+                <p><strong>País:</strong> Colombia</p>
+                <p><strong>Cuerpo:</strong> Medio</p>
+                <p><strong>Intensidad:</strong> Media</p>
+                <p><strong>Notas:</strong> Chocolate, cítricos</p>
+            </div>
+            <div id="opciones-producto">
+                <p class="opciones">TAMAÑO</p>
+                <select class= "select-opciones" name="tamano">
+                    <option value="500gr">500 GR</option>
+                    <option value="1kg">1 KG</option>
+                </select><br>
+                <p class="opciones">MOLIENDA</p>
+                <select class= "select-opciones" name="molienda">
+                    <option value="granos">GRANOS</option>
+                    <option value="espresso">ESPRESSO</option>
+                    <option value="filtro">FILTRO</option>
+                </select><br>
+                <p class="opciones">UNIDADES</p>
+                <select class= "select-opciones" name="tamano">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="2">3</option>
+                </select>
+                <p id="precio-producto">PRECIO: $50</p>
+                <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+    </div>
+    <div id="descripcion-producto">
+        <div id="texto-descripcion-producto">
+            <h2 class="nombre-producto">COLOMBIA BLEND</h2>
+            <hr class="under-line">
+            <p>Combinando los mejores sabores de Colombia, 
+                este blend ofrece una intensidad media y 
+                un sabor completo y balanceado, con notas de chocolate y citricos.</p>
+        </div>
+    </div>
+    <div id="productos-relacionados-titulo">
+        <h2 class="nombre-producto">PRODUCTOS RELACIONADOS</h2>
+        <hr class="under-line">
+    </div>
+    <div id="productos-relacionados">
+        <div class="un-producto-relacionado">
+            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-2.png" width = "300px" height="300px"></img>
+            <p class="nombre-producto-relacionado">MEXICO BLEND</p>
+        </div>
+        <div class="un-producto-relacionado">
+            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-3.png" width = "300px" height="300px"></img>
+            <p class="nombre-producto-relacionado">COLOMBIA INTENSO</p>
+        </div>
+        <div class="un-producto-relacionado">
+            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-4.png" width = "300px" height="300px"></img>
+            <p class="nombre-producto-relacionado">COLOMBIA SUAVE</p>
+        </div>
+    </div>
+</body>
+</html>
