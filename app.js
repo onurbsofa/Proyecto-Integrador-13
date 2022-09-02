@@ -5,7 +5,7 @@ const app = express() ;
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) ); 
 
-app.listen(3030,function() {
+app.listen(3000,function() {
     console.log('Corriendo');
 });
 
