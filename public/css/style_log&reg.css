@@ -1,0 +1,106 @@
+body{
+    font-family: 'Jost', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.color_especial{
+    color: #DB780F;
+}
+
+main{
+    margin: 0.5rem 0 1.5rem;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.7rem;
+    text-align: center;  
+    margin-bottom: 2rem;  
+}
+
+form{
+    width: 100vw;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    background-color: black;
+    border: #a6a6a6 inset 0.15rem;
+    color: #f3f2f2;
+}
+
+.celda{
+    width: 350px;
+    margin-bottom: 1rem;
+}
+
+.asterisco{
+    color: red;
+}
+
+.boton{
+    width: 7rem;
+    height: 2.5rem;
+    background-color: black;
+    border: 2px solid #DB780F;
+    border-radius: 8%;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem;
+    transition: all 500ms;
+}
+
+.boton:hover {
+    background-color: #DB780F;
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.redireccion {
+    text-decoration: none;
+}
+
+.redireccion:hover {
+    opacity: 0.9;
+    color: #DB780F;
+}
+
+#rc{
+    margin-top: -0.7rem;
+}
+
+@media (max-width: 500px){
+    h3{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    form{
+        width: fit-content;
+        margin-left: 40px;
+    }
+
+    .celda{
+        width: 80vw;
+        
+    }
+}
+
+#chiste{
+    position: relative;
+    right: 48px;
+    top: 260px;
+    text-decoration: none;
+    color: white;
+}
