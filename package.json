@@ -4,7 +4,7 @@
   "description": "clon mercado libre",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app.js"
+    "start": "node app.js"
   },
   "author": "Bruno Fazio",
   "license": "ISC",
