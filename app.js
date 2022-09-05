@@ -33,6 +33,6 @@ app.get('/registro', (req,res) =>{
     res.sendFile(path.resolve(__dirname, './views/registro.html'));  // Permite enviar un archivo HTML
 });
 
-app.get('/rec-contra', (req,res) =>{
+app.get('/rec_contra', (req,res) =>{
     res.sendFile(path.resolve(__dirname, './views/rec_contra.html'));  // Permite enviar un archivo HTML
 });
