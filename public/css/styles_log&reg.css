@@ -1,15 +1,12 @@
-body{
+main{
     font-family: 'Jost', sans-serif;
     background-color: black;
     color: white;
+    margin: 0.5rem 0 1.5rem;
 }
 
 .color_especial{
     color: #DB780F;
-}
-
-main{
-    margin: 0.5rem 0 1.5rem;
 }
 
 h2{
