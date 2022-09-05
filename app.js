@@ -9,7 +9,7 @@ app.listen(4000,function() {
     console.log('Corriendo');
 });
 
-app.get('/Index', (req,res) => {
+app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname,'./views/index.html'));
 });
 
