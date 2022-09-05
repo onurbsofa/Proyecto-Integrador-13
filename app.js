@@ -5,7 +5,7 @@ const app = express() ;
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) ); 
 
-app.listen(3030,function() {
+app.listen(3000,function() {
     console.log('Corriendo');
 });
 
@@ -16,3 +16,10 @@ app.get('/Index', (req,res) => {
 app.get('/detalle-producto',(req,res) => {
     res.sendFile(path.join(__dirname,'/views/detalle-producto.html'))
 })
+
+app.get('/productos',(req,res) => {
+    res.sendFile(path.join(__dirname,'/views/productos.html'))
+})
+app.get('/carrito-compras', (req,res) =>{
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'));  // Permite enviar un archivo HTML
+});
