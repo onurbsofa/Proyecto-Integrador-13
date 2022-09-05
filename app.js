@@ -20,3 +20,6 @@ app.get('/detalle-producto',(req,res) => {
 app.get('/productos',(req,res) => {
     res.sendFile(path.join(__dirname,'/views/productos.html'))
 })
+app.get('/carrito-compras', (req,res) =>{
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'));  // Permite enviar un archivo HTML
+});

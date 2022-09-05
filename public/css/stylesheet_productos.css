@@ -107,7 +107,7 @@ section.menu-producto {
   }
   
   .producto-item .abajo-item .date {
-    float: left;
+    /*float: left;*/
     text-align: center;
     display: inline-block;
     margin-right: 20px;
