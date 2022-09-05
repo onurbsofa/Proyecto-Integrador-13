@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tostao Coffe to go </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
+    <link rel="stylesheet" href="/css/stylesHome.css">
+    <!--Links del header-->
+    <link href="/css/styles-header.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+			<div id="menu">
+				<ul class="menu-left">
+                    <i id="burger-menu" class="fa-solid fa-bars fa-2x"></i>
+					<li class="item"><a href="/index" title="Home">Home</a></li>
+					<li class="item"><a href="#header" title="Nosotros">Nosotros</a></li>
+					<li class="item"><a href="#header" title="Contacto">Contacto</a></li>
+				</ul>
+                <h2 class="brand">TOSTAO</h2>
+                <ul class="menu-right">
+					<li class="item"><a href="/login" title="Login">Login</a></li>
+					<a href="/carrito-compras" title="Carrito"><li class="fa-solid fa-cart-shopping fa-2x"></li></a>
+				</ul>
+			</div>
+		</nav>
+    </header>
+    <main>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/banner-principal.png" class="d-block w-100" alt="primer banner de producto">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/banner.svg" class="d-block w-100" alt="segundo banner">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <section class="productos-titulo">
+            <div id="recomendado">
+                <h2 class="nombre-producto">Productos recomendados</h2>
+            </div>
+            <div id="detalles-productos">
+                <div class="recomendado-productos">
+                    <img class="productoimg" src = "/img/cafe-bolsa-2.png" width = "300px" height="300px"></img>
+                    <p class="nombre-producto-recomendado">MEXICO BLEND</p>
+                    <a href="detalle-producto"><button class="boton-recomendado">Ver más</button></a>
+                </div>
+                <div class="recomendado-productos">
+                    <img class="productoimg" src = "/img/cafe-bolsa-3.png" width = "300px" height="300px"></img>
+                    <p class="nombre-producto-recomendado">COLOMBIA INTENSO</p>
+                    <a href="detalle-producto"><button class="boton-recomendado">Ver más</button></a>
+                </div>
+                <div class="recomendado-productos">
+                    <img class="productoimg" src = "/img/cafe-bolsa-4.png" width = "300px" height="300px"></img>
+                    <p class="nombre-producto-recomendado">COLOMBIA SUAVE</p>
+                    <a href="detalle-producto"><button class="boton-recomendado">Ver más</button></a>
+                </div>
+            </div>
+          </section>
+        <section class="recetas">
+            <div id="recetas-titulo">
+                <h2 class="nombre-recetas">Recetas y preparaciones</h2>
+            </div> 
+          <div id="recetas-preparaciones">
+            <div class="recetas-cafe">
+                <img class="recetasimg" src = "/img/receta1.jpg" width = "500px" height="300px"></img>
+                <p class="descripcion-receta">CAFÉ HELADO - 8 RECETAS </p> 
+            </div>
+            <div class="recetas-cafe">
+                <img class="recetasimg" src = "/img/receta2.jpg" width = "500px" height="300px"></img>
+                <p class="descripcion-receta">BATIDO DE CAFÉ Y CHOCOLATE</p>
+            </div>
+            <div class="recetas-cafe">
+                <p class="texto-receta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illo placeat odio repellat aliquam provident minus, consequatur ab laudantium assumenda, cum quo aliquid temporibus eos tempore molestias sed? Aspernatur, cum? </p>
+                <button class="boton-recetas">Ver más</button>
+            </div>
+        </div>    
+                            
+        </section>
+    </main>
+    
+        <footer>
+            <section id="footer-first-section">
+                <img id="imagen-logo" src ="/img/logo.svg"></img>
+                <article>
+                    <h4>REDES SOCIALES</h4>
+                    <p>@tostaocafe</p>                
+                </article>
+                <article>
+                    <h4>TÉRMINOS Y CONDICIONES:</h4>
+                    <p>Términos y condiciones</p>
+                    <p>suscripciones.</p>
+                    <p>entrega de productos</p>
+                    
+                </article>
+                <article>
+                    <h4>CONTÁCTANOS</h4>
+                    <p>(601) 111 2 11 511 - 01 8000 677567</p>
+                        <p>Lunes a viernes de 8 am a 5 pm</p>
+                            <p>Sábados 8 am a 12 m</p>
+                </article>
+            </section>
+        </footer>
+     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+</body>
+</html>
