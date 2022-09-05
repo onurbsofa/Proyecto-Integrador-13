@@ -8,9 +8,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="/css/styles-detalle-producto.css" rel="stylesheet">
+    <!--Para el header tienen que copiar estas dos lineas de abajo y pegarlas en su <head>-->
+    <link href="/css/styles-header.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+    <!-- -->
 </head>
 <body>
+    <!--Copiar esta seccion <header> para tener el header en su vista-->
+    <header id="header">
+        <nav>
+			<div id="menu">
+				<ul class="menu-left">
+                    <i id="burger-menu" class="fa-solid fa-bars fa-2x"></i>
+					<li class="item"><a href="/index.html" title="Home">Home</a></li>
+					<li class="item"><a href="#header" title="Nosotros">Nosotros</a></li>
+					<li class="item"><a href="#header" title="Contacto">Contacto</a></li>
+				</ul>
+                <h2 class="brand">TOSTAO</h2>
+                <ul class="menu-right">
+					<li class="item"><a href="/login.html" title="Login">Login</a></li>
+					<a href="/carrito.html" title="Carrito"><li class="fa-solid fa-cart-shopping fa-2x"></li></a>
+				</ul>
+			</div>
+		</nav>
+    </header>
 
+    <!--H2 con imagen de fondo-->
     <div id="top-div-image">
         <div id="top-div">
             <h2 id="cafe-premium">CAFÉ PREMIUM</h2>
@@ -19,6 +42,7 @@
         </div>
     </div>
 
+    <!--Producto pincipal-->
     <div id="seccion-producto-principal">
         <div class="seccion-producto-principal-componente-1">
             <img id="imagen-producto-principal" src = "/img/cafe-bolsa-1.png"></img>
@@ -64,6 +88,7 @@
                 un sabor completo y balanceado, con notas de chocolate y citricos.</p>
         </div>
     </div>
+    <!--Productos relacionados-->
     <div id="productos-relacionados-titulo">
         <h2 class="nombre-producto">PRODUCTOS RELACIONADOS</h2>
         <hr class="under-line">
