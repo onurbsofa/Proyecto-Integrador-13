@@ -15,11 +15,24 @@ app.get('/Index', (req,res) => {
 
 app.get('/detalle-producto',(req,res) => {
     res.sendFile(path.join(__dirname,'/views/detalle-producto.html'))
-})
+});
 
 app.get('/productos',(req,res) => {
     res.sendFile(path.join(__dirname,'/views/productos.html'))
-})
+});
+
 app.get('/carrito-compras', (req,res) =>{
     res.sendFile(path.resolve(__dirname, './views/carrito.html'));  // Permite enviar un archivo HTML
+});
+
+app.get('/login', (req,res) =>{
+    res.sendFile(path.resolve(__dirname, './views/login.html'));  // Permite enviar un archivo HTML
+});
+
+app.get('/registro', (req,res) =>{
+    res.sendFile(path.resolve(__dirname, './views/registro.html'));  // Permite enviar un archivo HTML
+});
+
+app.get('/rec-contra', (req,res) =>{
+    res.sendFile(path.resolve(__dirname, './views/rec_contra.html'));  // Permite enviar un archivo HTML
 });
