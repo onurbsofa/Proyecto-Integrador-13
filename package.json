@@ -4,7 +4,8 @@
   "description": "clon mercado libre",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Bruno Fazio",
   "license": "ISC",
@@ -18,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/onurbsofa/Proyecto-Integrador-13/issues"
   },
-  "homepage": "https://github.com/onurbsofa/Proyecto-Integrador-13#readme"
+  "homepage": "https://github.com/onurbsofa/Proyecto-Integrador-13/blob/master/views/index.html"
 }
