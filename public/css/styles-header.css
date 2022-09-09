@@ -1,4 +1,4 @@
-#header {background:#000;color:#fff; padding-top: 10px;}
+#header {background:#000;color:#fff; padding-top: 10px; font-size: 14px;}
 
 #menu{display: flex; width: 100%; justify-content: space-between; align-items: center;}
 #menu .menu-left{padding-left: 20px;}
