@@ -10,7 +10,7 @@ detalleProducto : (req,res) => {
 },
 
 productos : (req,res) => {
-    res.render('productos');
+    res.render('listado-de-productos');
 },
 
 carritoCompras : (req,res) =>{
