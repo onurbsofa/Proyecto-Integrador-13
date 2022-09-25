@@ -1,4 +1,6 @@
-const todosRoutes = require('./src/routes/todosRoutes')
+const mainRoutes = require('./src/routes/mainRoutes')
+const productRoutes = require('./src/routes/productRoutes')
+const userRoutes = require('./src/routes/userRoutes')
 const express = require('express');
 const path = require ('path');
 const app = express();
@@ -12,12 +14,11 @@ app.listen(process.env.PORT || 3000, function() {
     console.log('Serevidor corriendo en el puerto 3000');
 });
 
-app.use("/", todosRoutes);
-app.use("/detalle-producto", todosRoutes);
-app.use("/productos", todosRoutes);
-app.use("/carrito-compras", todosRoutes);
-app.use("/login", todosRoutes);
-app.use("/registro", todosRoutes);
-app.use("/rec_contra", todosRoutes);
+app.use("/", mainRoutes);
+
+app.use("/product", productRoutes);
+
+app.use("/user", userRoutes);
+
 
 
