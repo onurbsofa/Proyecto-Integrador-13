@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles-nuevo-producto.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+    <title>Tostao Coffe to go</title>
+
+</head>
+<body>
+      <!--Include Header-->
+      <%- include('./partials/header') %>     
+<div class="form-nuevo-producto">
+    <h2>Nuevo Producto</h2>
+    <h3> Ingrese los siguientes datos</h3> 
+    <form class="row g-3">
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Nuevo Producto</label>
+          <input type="text" class="form-control" id="validationDefault01" value="Nombre del producto" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Código</label>
+            <input type="text" class="form-control" id="validationDefault02" value="Referencia del producto" required>
+          </div>
+        
+        <div class="col-md-4">
+          <label for="validationDefault03" class="form-label">Categoría</label>
+          <select class="form-select" id="validationDefault03" required>
+            <option selected disabled value="">Seleccione una categoría</option>
+            <option>MEXICO BLEND</option>
+            <option>COLOMBIA INTENSO</option>
+            <option>COLOMBIA SUAVE</option>
+          </select>
+        </div>
+          <div class="col-4">
+            <label for="formFile" class="form-label">Selecciona la imagen del producto</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        <div class="col-md-4">
+          <label for="validationDefault04" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="validationDefault04" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault05" class="form-label">Cantidad en el inventario</label>
+            <input type="number" class="form-control" id="validationDefault05" required>
+          </div>
+        <div class="col-md-4">
+            <label for="validationDefault03" class="form-label">Tamaño</label>
+            <select class="form-select" id="validationDefault03" required>
+              <option selected disabled value="">Seleccione una categoría</option>
+              <option>500 GR</option>
+              <option>1 KG</option>
+            </select>
+        </div>
+        <div class="col-7">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto </label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="col-12">
+          <button class="" type="submit">Crear producto</button>
+        </div>
+      </form>
+</div>
+<%-include('./partials/footer-wiliam') %>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+  </body>
+  </html>
