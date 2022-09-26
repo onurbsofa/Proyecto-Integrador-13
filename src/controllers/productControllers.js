@@ -6,8 +6,11 @@ const productControllers = {
     detalleProducto : (req,res) => {
         res.render('product/detalle-producto');
     },
-    productoNuevo : (req,res) => {
-        res.render('product/producto-nuevo');
+    nuevoProducto : (req,res) => {
+        res.render('product/nuevo-producto');
+    },
+    editarProducto : (req,res) => {
+        res.render('product/editar-producto');
     },
 }
 
