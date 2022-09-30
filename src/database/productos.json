@@ -1,0 +1,35 @@
+[
+    {
+        "id":1,
+        "nombre":"Colombia Suave",
+        "imagen":"public",
+        "fecha":"Nov",
+        "descripción":"",
+        "precio":""
+    },
+    {
+        "id":1,
+        "nombre":"Colombia blend",
+        "imagen":"public",
+        "fecha":"Nov",
+        "descripción":"",
+        "precio":""
+    },
+    {
+        "id":1,
+        "nombre":"Mexico Blend",
+        "imagen":"public",
+        "fecha":"Nov",
+        "descripción":"",
+        "precio":""
+    },
+    {
+        "id":1,
+        "nombre":"Colombia Intenso",
+        "imagen":"public",
+        "fecha":"Nov",
+        "descripción":"",
+        "precio":""
+    }
+]
+
