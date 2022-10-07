@@ -1,0 +1,22 @@
+[
+ {
+  "id": 1,
+  "nombre": "Producto 2",
+  "categoria": "COLOMBIA INTENSO",
+  "imagen": "1665104742257.png",
+  "precio": 1000,
+  "cantidad": 12,
+  "tamano": "1 KG",
+  "descripcion": "Prueba 2"
+ },
+ {
+  "id": 2,
+  "nombre": "Producto 3",
+  "categoria": "COLOMBIA INTENSO",
+  "imagen": "1665105244509.png",
+  "precio": 111,
+  "cantidad": 13,
+  "tamano": "500 GR",
+  "descripcion": "Prueba 3"
+ }
+]
