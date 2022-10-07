@@ -1,11 +1,14 @@
 [
     {
-        "id":1,
-        "nombre":"Colombia Suave",
-        "imagen":"cafe-bolsa-1.png",
-        "fecha":"Nov",
-        "descripción":"",
-        "precio":"700"
+        "id": 1,
+        "nombre": "Producto EDITADO",
+        "imagen": "1665126908113.png",
+        "precio": 9999999,
+        "cantidad": 999999,
+        "pais": "mexico",
+        "cuerpo": "complejo",
+        "intensidad": "SUAVE",
+        "descripcion": "descripcion EDITADA"
     },
     {
         "id":2,
@@ -32,4 +35,5 @@
         "precio":"402"
     }
 ]
+
 
