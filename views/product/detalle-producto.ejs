@@ -34,16 +34,16 @@
     <!--Producto pincipal-->
     <div id="seccion-producto-principal">
         <div class="seccion-producto-principal-componente-1">
-            <img id="imagen-producto-principal" src = "/img/cafe-bolsa-1.png"></img>
+            <img id="imagen-producto-principal" src = "/img/<%= producto.imagen %>"></img>
         </div>
         <div lass="seccion-producto-principal-componente-2">
             <div id="caracteristicas-producto">
-                <h2 class="nombre-producto">COLOMBIA BLEND</h2>
+                <h2 class="nombre-producto"><%= producto.nombre %></h2>
                 <hr id="under-line-producto">
-                <p><strong>País:</strong> Colombia</p>
-                <p><strong>Cuerpo:</strong> Medio</p>
-                <p><strong>Intensidad:</strong> Media</p>
-                <p><strong>Notas:</strong> Chocolate, cítricos</p>
+                <p><strong>País:</strong> <%= producto.pais %></p>
+                <p><strong>Cuerpo:</strong> <%= producto.cuerpo %></p>
+                <p><strong>Intensidad:</strong> <%= producto.intensidad %></p>
+                <!-- <p><strong>Notas:</strong> Chocolate, cítricos</p> -->
             </div>
             <div id="opciones-producto">
                 <p class="opciones">TAMAÑO</p>
@@ -63,8 +63,10 @@
                     <option value="2">2</option>
                     <option value="2">3</option>
                 </select>
-                <p id="precio-producto">PRECIO: $50</p>
-                <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button>
+                <p id="precio-producto">PRECIO: $ <%= producto.precio %></p>
+                <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button><br><br>
+                <a href = "/product/editar-producto/<%= producto.id %>"><button type="button" id="boton-agregar-carrito">EDITAR</button></a><br><br>
+                <button type="button" id="boton-agregar-carrito">BORRAR</button>
             </div>
         </div>
     </div>
@@ -72,9 +74,7 @@
         <div id="texto-descripcion-producto">
             <h2 class="nombre-producto">COLOMBIA BLEND</h2>
             <hr class="under-line">
-            <p>Combinando los mejores sabores de Colombia, 
-                este blend ofrece una intensidad media y 
-                un sabor completo y balanceado, con notas de chocolate y citricos.</p>
+            <p><%= producto.descripcion %></p>
         </div>
     </div>
     <!--Productos relacionados-->

@@ -20,7 +20,7 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 
 router.get('/listado-de-productos', productControllers.listadoProductos);
-router.get('/detalle-producto', productControllers.detalleProducto);
+router.get('/detalle-producto/:id', productControllers.detalleProducto);
 
 //Crear producto
 router.get('/nuevo-producto', productControllers.nuevoProducto);
@@ -28,7 +28,7 @@ router.post('/nuevo-producto', uploadFile.single('imagen') , productControllers.
 
 //Editar Producto
 router.get('/editar-producto/:id', productControllers.editarProducto);
-// router.put('/editar-producto/:id', uploadFile.single('imagen'), productControllers.actualizarProducto); 
+router.put('/editar-producto/:id', uploadFile.single('imagen'), productControllers.actualizarProducto); 
 
 
 module.exports = router;
