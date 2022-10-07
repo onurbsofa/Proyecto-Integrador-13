@@ -2,34 +2,34 @@
     {
         "id":1,
         "nombre":"Colombia Suave",
-        "imagen":"public",
+        "imagen":"cafe-bolsa-1.png",
         "fecha":"Nov",
         "descripción":"",
-        "precio":""
+        "precio":"700"
     },
     {
-        "id":1,
+        "id":2,
         "nombre":"Colombia blend",
-        "imagen":"public",
+        "imagen":"cafe-bolsa-2.png",
         "fecha":"Nov",
-        "descripción":"",
-        "precio":""
+        "descripción":"hola qu hace",
+        "precio":"600"
     },
     {
         "id":1,
         "nombre":"Mexico Blend",
-        "imagen":"public",
+        "imagen":"cafe-bolsa-3.png",
         "fecha":"Nov",
         "descripción":"",
-        "precio":""
+        "precio":"920"
     },
     {
         "id":1,
         "nombre":"Colombia Intenso",
-        "imagen":"public",
+        "imagen":"cafe-bolsa-4.png",
         "fecha":"Nov",
         "descripción":"",
-        "precio":""
+        "precio":"402"
     }
 ]
 

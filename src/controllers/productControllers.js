@@ -1,6 +1,9 @@
+const productosJson = require("../database/productos.json")
+
+
 const productControllers = {
     listadoProductos : (req,res) => {
-        res.render('product/listado-de-productos');
+        res.render('product/listado-de-productos', {productosJson});
     },
     
     detalleProducto : (req,res) => {
