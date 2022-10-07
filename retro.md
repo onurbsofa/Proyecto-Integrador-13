@@ -4,3 +4,15 @@ semana del 19 al 26 de septiembre.
 *Ademas cristina se encargo de las vistas y quedaron muy bien, especialmente la de crear producto.
 *Instalamos nodemon y aplicamos ejs, el template engine con el que comenzaremos a crear las vistas dinamicas.
 *Finalmente agragamos las dos vistas nuevas de este srpint al header para poder accder a ellas rapidamente.
+
+retrospectiva:sprint 4
+
+1. Comenzar a hacer: Usar el Trello. Organizarnos con mas tiempo y dividir tareas.
+
+2. Hacer mas: Mas comunicacion en Discord. Mas presencia en el breakout room de las clases.
+
+3. Continuar haciendo: Cumplir minimamente con los deadlines de los sprints.
+
+4. Hacer menos: Desaparecer, no comunicar
+
+5. Dejar de hacer:
