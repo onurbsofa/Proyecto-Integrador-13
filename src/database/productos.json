@@ -1,39 +1,59 @@
 [
-    {
-        "id": 1,
-        "nombre": "Producto EDITADO",
-        "imagen": "1665126908113.png",
-        "precio": 9999999,
-        "cantidad": 999999,
-        "pais": "mexico",
-        "cuerpo": "complejo",
-        "intensidad": "SUAVE",
-        "descripcion": "descripcion EDITADA"
-    },
-    {
-        "id":2,
-        "nombre":"Colombia blend",
-        "imagen":"cafe-bolsa-2.png",
-        "fecha":"Nov",
-        "descripción":"hola qu hace",
-        "precio":"600"
-    },
-    {
-        "id":1,
-        "nombre":"Mexico Blend",
-        "imagen":"cafe-bolsa-3.png",
-        "fecha":"Nov",
-        "descripción":"",
-        "precio":"920"
-    },
-    {
-        "id":1,
-        "nombre":"Colombia Intenso",
-        "imagen":"cafe-bolsa-4.png",
-        "fecha":"Nov",
-        "descripción":"",
-        "precio":"402"
-    }
+ {
+  "id": 1,
+  "nombre": "Producto EDITADO",
+  "imagen": "1665126908113.png",
+  "precio": 9999999,
+  "cantidad": 999999,
+  "pais": "mexico",
+  "cuerpo": "complejo",
+  "intensidad": "SUAVE",
+  "descripcion": "descripcion EDITADA"
+ },
+ {
+  "id": 2,
+  "nombre": "Colombia blend",
+  "imagen": "cafe-bolsa-2.png",
+  "fecha": "Nov",
+  "descripción": "hola qu hace",
+  "precio": "600"
+ },
+ {
+  "id": 1,
+  "nombre": "Mexico Blend",
+  "imagen": "cafe-bolsa-3.png",
+  "fecha": "Nov",
+  "descripción": "",
+  "precio": "920"
+ },
+ {
+  "id": 1,
+  "nombre": "Colombia Intenso",
+  "imagen": "cafe-bolsa-4.png",
+  "fecha": "Nov",
+  "descripción": "",
+  "precio": "402"
+ },
+ {
+  "id": 2,
+  "nombre": "TOSTATO ",
+  "imagen": "1665296875029.png",
+  "precio": 90,
+  "cantidad": 97,
+  "pais": "COLOMBIA",
+  "cuerpo": "IU",
+  "intensidad": "FUERTE ",
+  "descripcion": ",.,ÑKÑ"
+ },
+ {
+  "id": 3,
+  "nombre": "nevados ",
+  "imagen": "1665327570381.png",
+  "precio": 455,
+  "cantidad": 12,
+  "pais": "COLOMBIA",
+  "cuerpo": "34",
+  "intensidad": "suave",
+  "descripcion": " "
+ }
 ]
-
-

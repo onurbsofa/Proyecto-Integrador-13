@@ -1,3 +1,8 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	}
 body {
     font-family: 'Jost', sans-serif;
     color: rgb(255, 255, 255);
@@ -5,8 +10,7 @@ body {
     font-size: 15px;
     background: url(https://images.pexels.com/photos/942809/pexels-photo-942809.jpeg?cs=srgb&dl=pexels-lukas-942809.jpg&fm=jpg);
 	background-attachment: fixed;
-	background-size:cover;
-    
+	background-size:cover;    
 }
 
 h2{
@@ -21,15 +25,16 @@ h2{
 	letter-spacing: 2px;
 	font-size: 3.5em;
 	margin: 0;
-
 }
+
 h3{
     color: #DB780F;
     text-align: center;
     margin-top: 1px;
+
 }
 
-.form-nuevo-producto {
+.container {
     
     background-image: linear-gradient(to top, rgba(239, 172, 0, 0.4) 0%, rgba(60, 44, 2, 0.71) 100%);
     box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
@@ -42,6 +47,7 @@ h3{
 	width: 900px;
 	padding: 1em;
     color: #DB780F;
+	display: flexbox;
 	
 	position: fixed;
 	bottom: 0;
@@ -53,6 +59,7 @@ button {
 	background-image: linear-gradient(to left, rgb(255, 199, 86) 0%, rgba(111, 54, 5, 0.995) 100%);
 	box-shadow: 0 9px 25px -5px #DB780F;
 	border-radius: 6px;
+	margin-top: 20px;
 	font-size: 1.4em;
 	cursor: pointer;
 	color: #FFFFFF;
@@ -66,4 +73,25 @@ button:hover{
 }
 button:active{
     transform: translatey(5px);
+}
+@media screen and (min-width: 900px){
+    .container {
+        width: 900px; 
+		height: 600px;
+		
+    }
+}
+@media screen and (max-width: 899px){
+    .container {
+        width: 500px; 
+		height: 600px;
+		
+    }
+}
+@media screen and (max-width: 500px){
+    .container {
+        width: 300px; 
+		height: 800px;
+		
+    }
 }

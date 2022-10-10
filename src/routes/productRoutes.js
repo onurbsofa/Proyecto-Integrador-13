@@ -30,5 +30,8 @@ router.post('/nuevo-producto', uploadFile.single('imagen') , productControllers.
 router.get('/editar-producto/:id', productControllers.editarProducto);
 router.put('/editar-producto/:id', uploadFile.single('imagen'), productControllers.actualizarProducto); 
 
+//Borrar Producto
+//router.get('/borrar-producto', productControllers.nuevoProducto);
+router.post('/borrar-producto/:id', productControllers.borrarProducto);
 
 module.exports = router;
