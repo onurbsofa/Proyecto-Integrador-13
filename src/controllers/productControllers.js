@@ -134,6 +134,32 @@ const productControllers = {
         //Reenvia a la vista del detalle de producto que acabamos de editar
 		res.redirect('/product/detalle-producto/'+idProducto);
 	},
+	borrarProducto: (req, res) => {
+		//console.log("si llego");
+		let idProducto = req.params.id;
+		let cont=0;
+		let nombreImagenAntigua = "";
+		for (let o of productosJson){
+			if (o.id==idProducto){
+				nombreImagenAntigua = o.imagen;
+				productosJson.splice(cont,1);
+			}
+			cont++;
+			
+		}
+
+		console.log(productosJson)
+		//Escribe el nuevo listado de productos en JSON
+		fs.writeFileSync(productsFilePath,JSON.stringify(productosJson, null, " "),'utf-8');
+
+		//Elimina la imagen actual
+		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
+
+		//Reenvia a la vista del detalle de producto que acabamos de editar
+		res.render('product/nuevo-producto', {productosJson});
+
+	},
+
 }
 
 module.exports = productControllers;

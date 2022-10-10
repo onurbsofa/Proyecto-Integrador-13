@@ -8,6 +8,7 @@ body {
     color: white;
     margin: 0px;
     font-family: 'Jost', sans-serif;
+    display: flexbox;
   }
   html {
     font-size: 80.5%;
@@ -116,62 +117,9 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(250, 198, 9, 0.505
   filter: opacity(.5);
 }
   
-  footer {
-    background: linear-gradient(207.8deg, #DB780F 16.69%, #593527 100%);
-    color: white;
-    width: 100vw;
-}
-
-#footer-first-section {
-    display: flex;
-    flex-flow: column wrap;
-    width: 80vw;
-    margin: auto;
-}
-
-#footer-first-section article {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
-
-#footer-first-section i{
-    font-size: 2em;
-    margin-bottom: 0.625rem;
-    color: #03264C;
-}
-
-#footer-first-section article p{
-    margin: 0.1875rem 0;
-    text-align: center;
-}
-
-#footer-first-section article {
-    margin: 1rem 0;
-}
-
-#footer-second-section {
-    text-align: center;
-}
-#imagen-logo {
-  width: 10vw;
-  height: 10vw;
-}
+ 
 
 
-@media screen and (min-width: 1200px){
-    #footer-first-section {
-        display: flex;
-        width: 90vw; 
-        flex-direction: row;       
-        justify-content:space-evenly;
-    }
-
-    #footer-first-section article{
-        display: flex;
-        padding: 0 1rem;
-    }
-}
 @media (max-width:499px ){
   img.recetasimg{
   width: 300px;
