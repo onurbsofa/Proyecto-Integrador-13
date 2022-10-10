@@ -1,39 +1,35 @@
 [
-    {
-        "id": 1,
-        "nombre": "Producto EDITADO",
-        "imagen": "1665126908113.png",
-        "precio": 9999999,
-        "cantidad": 999999,
-        "pais": "mexico",
-        "cuerpo": "complejo",
-        "intensidad": "SUAVE",
-        "descripcion": "descripcion EDITADA"
-    },
-    {
-        "id":2,
-        "nombre":"Colombia blend",
-        "imagen":"cafe-bolsa-2.png",
-        "fecha":"Nov",
-        "descripción":"hola qu hace",
-        "precio":"600"
-    },
-    {
-        "id":1,
-        "nombre":"Mexico Blend",
-        "imagen":"cafe-bolsa-3.png",
-        "fecha":"Nov",
-        "descripción":"",
-        "precio":"920"
-    },
-    {
-        "id":1,
-        "nombre":"Colombia Intenso",
-        "imagen":"cafe-bolsa-4.png",
-        "fecha":"Nov",
-        "descripción":"",
-        "precio":"402"
-    }
+ {
+  "id": 1,
+  "nombre": "Producto editado ",
+  "imagen": "1665362787421.png",
+  "precio": 9999999,
+  "cantidad": 999999,
+  "pais": "mexico",
+  "cuerpo": "complejo",
+  "intensidad": "SUAVE",
+  "descripcion": "descripcion EDITADA"
+ },
+ {
+  "id": 2,
+  "nombre": "mexico blend",
+  "imagen": "1665355441057.png",
+  "precio": 900,
+  "cantidad": 6,
+  "pais": "mexico",
+  "cuerpo": "suave",
+  "intensidad": "nula",
+  "descripcion": "probando 123"
+ },
+ {
+  "id": 3,
+  "nombre": "colombian exprs",
+  "imagen": "1665362457654.png",
+  "precio": 400,
+  "cantidad": 5,
+  "pais": "colombiA",
+  "cuerpo": "QQLO",
+  "intensidad": "CCA",
+  "descripcion": ""
+ }
 ]
-
-
