@@ -156,7 +156,7 @@ const productControllers = {
 		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
 
 		//Reenvia a la vista del detalle de producto que acabamos de editar
-		res.render('product/nuevo-producto', {productosJson});
+		res.redirect('/../product/listado-de-productos');
 
 	},
 

@@ -1,80 +1,35 @@
 [
  {
-  "id": 1,
-  "nombre": "Producto editado ",
-  "imagen": "1665362787421.png",
-  "nombre": "Producto EDITADO",
-  "imagen": "1665126908113.png",
-  "precio": 9999999,
-  "cantidad": 999999,
-  "pais": "mexico",
-  "cuerpo": "complejo",
-  "intensidad": "SUAVE",
-  "descripcion": "descripcion EDITADA"
- },
- {
-  "id": 2,
-  "nombre": "mexico blend",
-  "imagen": "1665355441057.png",
-  "precio": 900,
-  "cantidad": 6,
-  "pais": "mexico",
-  "cuerpo": "suave",
-  "intensidad": "nula",
-  "descripcion": "probando 123"
- },
- {
-  "id": 3,
-  "nombre": "colombian exprs",
-  "imagen": "1665362457654.png",
-  "precio": 400,
-  "cantidad": 5,
-  "pais": "colombiA",
-  "cuerpo": "QQLO",
-  "intensidad": "CCA",
-  "descripcion": ""
-  "nombre": "Colombia blend",
-  "imagen": "cafe-bolsa-2.png",
-  "fecha": "Nov",
-  "descripción": "hola qu hace",
-  "precio": "600"
- },
- {
-  "id": 1,
+  "id": 5,
   "nombre": "Mexico Blend",
-  "imagen": "cafe-bolsa-3.png",
-  "fecha": "Nov",
-  "descripción": "",
-  "precio": "920"
+  "imagen": "1665443632139.png",
+  "precio": 600,
+  "cantidad": 6,
+  "pais": "Mexico",
+  "cuerpo": "Fuerte",
+  "intensidad": "Media",
+  "descripcion": "Probando 123"
  },
  {
-  "id": 1,
-  "nombre": "Colombia Intenso",
-  "imagen": "cafe-bolsa-4.png",
-  "fecha": "Nov",
-  "descripción": "",
-  "precio": "402"
+  "id": 6,
+  "nombre": "Colombia Blend",
+  "imagen": "1665444059990.png",
+  "precio": 650,
+  "cantidad": 6,
+  "pais": "Colombia",
+  "cuerpo": "Suave",
+  "intensidad": "Media",
+  "descripcion": "Citrico"
  },
  {
-  "id": 2,
-  "nombre": "TOSTATO ",
-  "imagen": "1665296875029.png",
-  "precio": 90,
-  "cantidad": 97,
-  "pais": "COLOMBIA",
-  "cuerpo": "IU",
-  "intensidad": "FUERTE ",
-  "descripcion": ",.,ÑKÑ"
- },
- {
-  "id": 3,
-  "nombre": "nevados ",
-  "imagen": "1665327570381.png",
-  "precio": 455,
-  "cantidad": 12,
-  "pais": "COLOMBIA",
-  "cuerpo": "34",
-  "intensidad": "suave",
-  "descripcion": " "
+  "id": 7,
+  "nombre": "Mexico Expresso",
+  "imagen": "1665444106005.png",
+  "precio": 900,
+  "cantidad": 7,
+  "pais": "Mexico",
+  "cuerpo": "Fuerte",
+  "intensidad": "Alta",
+  "descripcion": "Chocolatoso"
  }
 ]
