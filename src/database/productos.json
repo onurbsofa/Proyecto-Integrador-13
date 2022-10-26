@@ -2,13 +2,13 @@
  {
   "id": 5,
   "nombre": "Mexico Blend",
-  "imagen": "1665443632139.png",
+  "imagen": "1666768518555.png",
   "precio": 600,
   "cantidad": 6,
   "pais": "Mexico",
   "cuerpo": "Fuerte",
   "intensidad": "Media",
-  "descripcion": "Probando 123"
+  "descripcion": "Descripcion"
  },
  {
   "id": 6,

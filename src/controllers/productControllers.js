@@ -108,13 +108,26 @@ const productControllers = {
 		let nombreImagenAntigua = "";
 
         //Actualiza el objeto producto con los nuevos datos del formulario de edicion
+		
+		
+		
 		for (let o of productosJson){
 			if (o.id==idProducto){
 
 				nombreImagenAntigua = o.imagen;
 
+				//Si el usuario no agrega una nueva imagen, se mantiene la misma y el form no rompe
+				//console.log(req.file)
+				if(req.file){
+					nuevaImagen = req.file.filename
+				} else {
+					nuevaImagen = nombreImagenAntigua
+				}
+
+				
+
                 o.nombre = datos.nombre,
-                o.imagen = req.file.filename,
+                o.imagen = nuevaImagen,
                 o.precio =  parseInt(datos.precio),
                 o.cantidad = parseInt(datos.cantidad),
                 o.pais = datos.pais,
@@ -129,7 +142,9 @@ const productControllers = {
 		fs.writeFileSync(productsFilePath,JSON.stringify(productosJson, null, " "),'utf-8');
 
         //Elimina la imagen actual
+		if(req.file) {
 		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
+		}
 
         //Reenvia a la vista del detalle de producto que acabamos de editar
 		res.redirect('/product/detalle-producto/'+idProducto);
