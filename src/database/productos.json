@@ -31,5 +31,27 @@
   "cuerpo": "Fuerte",
   "intensidad": "Alta",
   "descripcion": "Chocolatoso"
+ },
+ {
+  "id": 8,
+  "nombre": "adasdas",
+  "imagen": "1667011368689.png",
+  "precio": 111,
+  "cantidad": 111,
+  "pais": "colombia",
+  "cuerpo": "aa",
+  "intensidad": "aaa",
+  "descripcion": "aaa"
+ },
+ {
+  "id": 9,
+  "nombre": "Nombre del producto",
+  "imagen": "1667012717453.png",
+  "precio": 222,
+  "cantidad": 222,
+  "pais": "a",
+  "cuerpo": "a",
+  "intensidad": "a",
+  "descripcion": "a"
  }
 ]

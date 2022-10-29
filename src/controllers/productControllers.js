@@ -43,6 +43,8 @@ const productControllers = {
     // Para crear un nuevo producto
 	crear: (req, res) => {
 		let datos = req.body;
+		console.log(req)
+
 
         let idNuevoProducto = 0
 
@@ -117,7 +119,6 @@ const productControllers = {
 				nombreImagenAntigua = o.imagen;
 
 				//Si el usuario no agrega una nueva imagen, se mantiene la misma y el form no rompe
-				//console.log(req.file)
 				if(req.file){
 					nuevaImagen = req.file.filename
 				} else {
