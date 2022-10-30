@@ -24,10 +24,6 @@
             <h3>Por favor, completá los siguientes datos:</h3> 
         </div>
 
-        <!-- <form action="registro" method="POST">   
-            <input type="text" name="name">
-            <button type="submit">Registrarte</button>                        
-        </form> -->
 
         
         <form action="registro" method="POST" id="formulario" class="container1">   
@@ -37,7 +33,10 @@
                     <div class="celda">
                         <label for="nombre">Nombre Completo</label>
                         <div>  
-                            <input type="text" id="nombre" name="name" placeholder="Nombre Apellido" class="form-control input">                        
+                            <input type="text" id="nombre" name="name" value="<%= locals.old && old.name %>" class="form-control input"> 
+                            <% if (locals.errors && errors.name) { %>
+                                <p class="feedback"><%= errors.name.msg %></p>
+                            <% } %>                       
                         </div>
                     </div>
 
@@ -46,7 +45,11 @@
                         <label for="email">Email<span class="asterisco">*</span></label>
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping">@</span>
-                            <input type="email" name="email" class="form-control input" placeholder="Ejemplo@mail.com" id="email" required>
+                            <input type="email" name="email" class="form-control input" value="<%= locals.old && old.email %>" id="email" required>
+                            <% if (locals.errors && errors.email) { %>
+                                <p class="feedback"><%= errors.email.msg %></p>
+                            <% } %>  
+                            
                         </div>
                     </div>
 
@@ -55,18 +58,24 @@
                         <label for="contraseña">Contraseña<span class="asterisco">*</span></label>
                         <div>
                             <input type="password" id="contraseña" class="form-control input" name="password" placeholder="Ej: Contraseña123" required>
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="feedback"><%= errors.password.msg %></p>
+                            <% } %>  
                         </div>
                     </div>
 
                     
 
                     <!--Grupo confirmar contraseña-->
-                    <!-- <div class="celda" id="campos_contraseña2">      
+                    <div class="celda" id="campos_contraseña2">      
                         <label for="confirmar_contraseña">Confirmá contraseña<span class="asterisco">*</span></label>
                         <div>
-                            <input type="password" id="confirmar_contraseña" class="form-control input" name="password" placeholder="Ej: Contraseña123" required>
+                            <input type="password" id="confirmar_contraseña" class="form-control input" name="confirmPassword" required>
+                            <% if (locals.errors && errors.confirmPassword) { %>
+                                <p class="feedback"><%= errors.confirmPassword.msg %></p>
+                            <% } %>  
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 
                 <!--Grupo boton + captcha + redireccion-->

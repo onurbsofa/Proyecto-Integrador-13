@@ -26,22 +26,21 @@ registroUsuario : (req,res) =>{
 
 crearUsuario : (req,res) => {
     let datos = req.body;
-    console.log(req)
-    console.log(datos)
 
-    
-    //const errors = validationResult(req)
+  
+    const errors = validationResult(req)
 
-    // return res.send(val)
 
-    //console.log(errors.mapped())
-
-    //if (errors.isEmpty()) {
-        //let idNuevoUser = (users[users.length-1].id)+1;
+    if (errors.isEmpty()) {
+        if (users[0]){
+        var idNuevoUser = (users[users.length-1].id)+1;
+        } else {
+        idNuevoUser = 1
+        }
 
 
         let nuevoUser = {
-            "id" : 1,//parseInt(idNuevoUser),
+            "id" : parseInt(idNuevoUser),
             "name" : datos.name,
             "email" : datos.email,
             "password" : bcrypt.hashSync(datos.password,10),
@@ -52,9 +51,9 @@ crearUsuario : (req,res) => {
         users.push(nuevoUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
         res.redirect('/')
-   // } else {
-   //     return res.render('user-register-form', {errors : errors.mapped(), old: req.body})
-   // }
+   } else {
+       return res.render('user/registro', {errors : errors.mapped(), old: req.body})
+   }
 
 
 

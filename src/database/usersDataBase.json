@@ -1,1 +1,14 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "martin",
+  "email": "martinleibo@gmail.com",
+  "password": "$2a$10$cgXJE0jXm4bso3v4JRG7NO97e42SZrKlt3yGFreeSCpXlECcRL3Dm"
+ },
+ {
+  "id": 2,
+  "name": "sadasdasd",
+  "email": "martinleibo@gmail.com",
+  "password": "$2a$10$sNBsLjWrl4WhiFMpN80cFuHjZD9ZyyPanRINuwCg868osdWZvvoYG"
+ }
+]

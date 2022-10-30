@@ -75,6 +75,11 @@ form{
     color: #DB780F;
 }
 
+.feedback {
+    color: red;
+    font-size: 12px;
+}
+
 #rc{
     margin-top: -0.7rem;
 }
