@@ -1,54 +1,35 @@
+//REQUIRES
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const router = express.Router();
-//const guestMw = require('../Middlewares/guestMw')
-//const loggedMw = require('../Middlewares/loggedMw')
+const multer = require('multer'); //Multer
 
-const { check } = require('express-validator');
 
+
+//Controllers
 const userControllers = require('../controllers/userControllers');
 
-//Para la validacion del form de registro
-const validateRegister = [
-    //Verifica que el nombre cumpla los requisitos
-    check('name')
-        .notEmpty().withMessage('Debes completar el nombre').bail()
-        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
+//Importa middleware para la validacion del form de registro
+const validateRegister = require('../middlewares/validateRegister')
 
-    //Verifica que el email cumpla los requisitos
-    check('email')
-        .notEmpty().withMessage('Debes completar el email').bail()
-        .isEmail().withMessage('Debes ingresar un email válido'),
-    
-    //Verifica que el password cumpla los requisitos    
-    check('password')
-        .notEmpty().withMessage('Debes completar la contraseña').bail()
-        .isLength({ min: 6 }).withMessage('La contraseña debe tener al menos 6 caracteres'),
+//Importa Multer middleware
+const multerDiskStorage = require('../middlewares/multerDiskStorage')
 
-    // Validacion custom para verificar que los passwords coincidan
-    check('confirmPassword')
-        
-        
-        .custom(async (confirmPassword, {req}) => {
-        const password = req.body.password
-   
-        // Si los passwords no coinciden devuelve este error
-        if(password !== confirmPassword){
-          throw new Error('Las contraseñas deben coincidir')
-        }
-      }),        
-
-]
+//Asignamos Multer storage a la constante uploadFile
+const uploadFile = multer({ storage: multerDiskStorage });
 
 
-
+//vista del form de login
 router.get('/login', userControllers.login);
 
 //vista del form de registro
 router.get('/registro', userControllers.registroUsuario);
 
 //post del form de registro con middleware validador
-router.post('/registro', validateRegister, userControllers.crearUsuario); 
+router.post('/registro', uploadFile.single('imagen'), validateRegister, userControllers.crearUsuario); 
 
+//vista para recuperar password (no funciona)
 router.get('/rec_contra', userControllers.recContra);
 
 module.exports = router;

@@ -22,60 +22,56 @@
         <h2>Nuevo Producto</h2>
         <h3> Ingrese los siguientes datos</h3> 
         <form class="row" action="nuevo-producto" method="POST" enctype="multipart/form-data">
+
+            <!-- nombre del producto -->
             <div class="col-xl-6 col-xs-12";>
               <label for="validationDefault01" class="form-label">Nuevo Producto</label>
               <input type="text" class="form-control" name="nombre" id="validationDefault01" value="Nombre del producto" required>
             </div>
-            <!-- <div class="col-md-4">
-                <label for="validationDefault02" class="form-label">Código</label>
-                <input type="text" class="form-control" id="validationDefault02" value="Referencia del producto" required>
-              </div> -->
-            
-            <!-- <div class="col-md-4">
-              <label for="validationDefault03" class="form-label">Molienda</label>
-              <select class="form-select" name="categoria" id="validationDefault03" required>
-                <option selected disabled value="">Seleccione una molienda</option>
-                <option>GRANOS</option>
-                <option>ESPRESSO</option>
-                <option>FILTRO</option>
-              </select>
-            </div> -->
+
+            <!-- imagen del producto -->
               <div class="col-xl-6 col-xs-12">
                 <label for="formFile" class="form-label">Selecciona la imagen del producto</label>
-                <input class="form-control" type="file" name="imagen" id="formFile">
+                <input class="form-control" type="file" name="imagen" id="formFile" required>
               </div>
+
+            <!-- precio del producto -->  
             <div class="col-xl-6 col-xs-12">
               <label for="validationDefault04" class="form-label">Precio</label>
               <input type="number" class="form-control" name="precio" id="validationDefault04" required>
             </div>
+
+            <!-- cantidad de producto -->
             <div class="col-xl-6 col-xs-12">
                 <label for="validationDefault05" class="form-label">Cantidad en el inventario</label>
                 <input type="number" class="form-control" name="cantidad"  id="validationDefault05" required>
               </div>
-            <!-- <div class="col-md-4">
-                <label for="validationDefault03" class="form-label">Tamaño</label>
-                <select class="form-select" name="tamano"  id="validationDefault03" required>
-                  <option selected disabled value="">Seleccione un tamaño:</option>
-                  <option>500 GR</option>
-                  <option>1 KG</option>
-                </select>
-            </div> -->
+            
+            <!-- pais del producto -->
             <div class="col-6 col-xs-12">
               <label for="validationDefault01" class="form-label">Pais</label>
               <input type="text" class="form-control" name="pais" id="validationDefault01" required>
             </div>
+
+            <!-- cuerpo del producto -->
             <div class="col-6">
               <label for="validationDefault01" class="form-label">Cuerpo</label>
               <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required>
             </div>
+
+            <!-- intensidad del producto -->
             <div class="col-6">
               <label for="validationDefault01" class="form-label">Intensidad</label>
               <input type="text" class="form-control" name="intensidad" id="validationDefault01" required>
             </div>
+
+            <!-- descripcion del producto -->
             <div class="col-6">
                 <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto </label>
                 <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows=""></textarea>
               </div>
+            
+            <!-- boton submit -->
             <div class="col-12">
               <button class="" type="submit">Crear producto</button>
             </div>
