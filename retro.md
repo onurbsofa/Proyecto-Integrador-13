@@ -1,11 +1,12 @@
-retrospectiva:sprint 3
+Retrospectiva:sprint 3
+
 semana del 19 al 26 de septiembre.
 *Pudimos Dividir las rutas y los controladores en tres para organizar mejor las diferentes areas que se necesitan.
 *Ademas cristina se encargo de las vistas y quedaron muy bien, especialmente la de crear producto.
 *Instalamos nodemon y aplicamos ejs, el template engine con el que comenzaremos a crear las vistas dinamicas.
 *Finalmente agragamos las dos vistas nuevas de este srpint al header para poder accder a ellas rapidamente.
 
-retrospectiva:sprint 4
+Retrospectiva:sprint 4
 
 1. Comenzar a hacer: Usar el Trello. Organizarnos con mas tiempo y dividir tareas.
 
@@ -16,3 +17,13 @@ retrospectiva:sprint 4
 4. Hacer menos: Desaparecer, no comunicar
 
 5. Dejar de hacer:
+
+
+
+Retrospectiva:sprint 5
+
+Comentamos mucho mas el codigo, es es bastante positivo. Tenemos que ser muy prolijos porque el proyecto va creciendo y se vuelve mas complejo
+
+Para el proximo intentemos no dejarlo para el ultimo dia, es bastante mas complicado y no tenemos mucho tiempo.
+
+Cristina estuvo ausente por motivos personales. William y Fede no aparecieron ni este ni el anterior sprint.
