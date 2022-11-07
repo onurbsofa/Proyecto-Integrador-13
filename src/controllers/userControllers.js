@@ -57,7 +57,7 @@ processLogin : (req, res) =>{
         if (req.body.remember_user) {
             res.cookie('userEmail',req.body.email, {maxAge : 1000 * 60 * 60 * 15})
         }
-        res.redirect('/') //si todo sale bien te manda al home donde tendria que verse el header con el apartado usuario pero todavia no esta la vista dinamica
+        res.redirect('/') //si todo sale bien te manda al home 
     }else{      
         return res.render( 'user/login', {errors : errors.mapped(), old: req.body})
     }

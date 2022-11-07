@@ -5,5 +5,12 @@
   "email": "martinleibo@gmail.com",
   "imagen": "1667810475194.png",
   "password": "$2a$10$9Nj9Ov93XET.QOb9KlmxMu5XUbyRvyy3dJAjFyyqxW0Ihun94X.4y"
+ },
+ {
+  "id": 2,
+  "name": "bruno",
+  "email": "bruno@gmail.com",
+  "imagen": "1667825403946.jpg",
+  "password": "$2a$10$luy.hOa4mhsGiXwr7t44d.n3HE5Leg6s4sqDPCpDgKkM60B8Nbjxe"
  }
 ]
