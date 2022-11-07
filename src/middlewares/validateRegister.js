@@ -25,9 +25,8 @@ const validateRegister = [
 
             const encontrado = users.find(element => element.email == emailIngresado);
 
-            console.log(encontrado)
        
-            // Si los passwords no coinciden devuelve este error
+            // Si los emails coinciden devuelve este error
             if(encontrado){
               throw new Error('El email ya se encuentra registrado, por favor selecciona otro')
             }

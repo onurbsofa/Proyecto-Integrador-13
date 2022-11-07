@@ -54,5 +54,33 @@
   "email": "bruno@gmail.com",
   "imagen": "1667685188304.jfif",
   "password": "$2a$10$5B4ufUwNuEVzbvPWU53R0uZrNJT/NmA0pPsbmAtbyZOdGgc5Al5oS"
+ },
+ {
+  "id": 15,
+  "name": "martin",
+  "email": "martinleibo2@gmail.com",
+  "imagen": "1667800774191.png",
+  "password": "$2a$10$UlNNKGAIE68F90Qam18Kf.rTS1MFUh1CuXU2lfxE/tn2wH7qs6rdm"
+ },
+ {
+  "id": 16,
+  "name": "martin",
+  "email": "martinleibo233@gmail.com",
+  "imagen": "1667803356041.jpg",
+  "password": "$2a$10$PpTC2EtWUrl8sI1zII4UPOveBZkrZZmq4Wm4nmnoMw9gFNjbJZp4K"
+ },
+ {
+  "id": 17,
+  "name": "Martin L",
+  "email": "martin123@gmail.com",
+  "imagen": "1667808981042.png",
+  "password": "$2a$10$FHNPEBB1KUBDVm4pljn2h.ab4tLjc0SJp.3yrnwAyVGva377flEmy"
+ },
+ {
+  "id": 18,
+  "name": "Martin L",
+  "email": "martinl@gmail.com",
+  "imagen": "1667809087139.png",
+  "password": "$2a$10$qU3GYIfaLo7xaMe3E7dMvOeHJXo16.AEEEcIHMKg7yBd1WFx6/rhW"
  }
 ]

@@ -23,29 +23,42 @@ login :  (req,res) =>{
     res.render('user/login');  
 },
 
+//para hacer el logout del usuario, destruye la session y la cookie
+logout : (req,res) => {
+    req.session.destroy()
+    res.clearCookie('userEmail')
+    return res.redirect('/')
+},
+
 processLogin : (req, res) =>{
     let errors = validationResult(req)
 
     //Verifica si hubo errores en el form, si no hay errores se fija si el email y la contraseña esten en la base de datos, si hay errores devuelve la misma vista con los mensaje de error
+
     if (errors.isEmpty()) {
-        for(let i = 0; users.length; i++){
+        for(let i = 0; i < users.length; i++){    //esto lo corregi, le faltaba el "i <" (Martin)
             if(users[i].email == req.body.email){
                 if(bcrypt.compareSync(req.body.password, users[i].password)){
-                    let usuarioALogearse = users[i];
+                    var usuarioALogearse = users[i];
                     break;
                 }
             }
         }
         //si bno coincide el mail o la contraseña usuarioALogearse no se crea por lo tanto es undefine y te tira un error manual en el formulario 
         if(usuarioALogearse == undefined){
-            return res.render('user/login', { errors: [
-                {msg:'Credenciales invalidas'}
-            ]})
+            return res.render('user/login', { errors: {
+                password: {msg:'Credenciales invalidas'}      //esto lo corregi, le faltaba indicar que campo era el mensaje "password" (Martin)
+        }})
         }
         /// aca estaria guardando al usuario en session una variable que se comparte en todo el proyecto 
         req.session.usuarioLogeado = usuarioALogearse;
+
+        //Se crea la cookie si el usuario hizo click en Recordarme
+        if (req.body.remember_user) {
+            res.cookie('userEmail',req.body.email, {maxAge : 1000 * 60 * 60 * 15})
+        }
         res.redirect('/') //si todo sale bien te manda al home donde tendria que verse el header con el apartado usuario pero todavia no esta la vista dinamica
-    }else{
+    }else{      
         return res.render( 'user/login', {errors : errors.mapped(), old: req.body})
     }
 },
@@ -84,8 +97,8 @@ crearUsuario : (req,res) => {
         users.push(nuevoUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
 
-        //reenvia al home
-        res.redirect('/')
+        //reenvia al login para que el usuario inicie session
+        res.redirect('/user/login')
    } else {
 
         //elimina la imagen que acabamos de subir

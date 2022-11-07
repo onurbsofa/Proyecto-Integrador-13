@@ -13,6 +13,9 @@ const userControllers = require('../controllers/userControllers');
 //Importa middleware para la validacion del form de registro
 const validateRegister = require('../middlewares/validateRegister')
 
+//Importa middleware para la validacion del form de login
+const validateLogin = require('../middlewares/validateLogin')
+
 const { check } = require('express-validator');
 
 //Importa Multer middleware
@@ -25,10 +28,10 @@ const uploadFile = multer({ storage: multerDiskStorage });
 //vista del form de login
 router.get('/login', userControllers.login);
 //post del login con midleware validator
-router.post('/login', [
-    check('email')
-        .isEmail().withMessage('Debes ingresar un email válido')
-], userControllers.processLogin)
+router.post('/login', validateLogin, userControllers.processLogin)
+
+//en "/logout" se hace el logout del usuario
+router.get('/logout', userControllers.logout)
 
 //vista para recuperar password (no funciona)
 router.get('/rec_contra', userControllers.recContra);
