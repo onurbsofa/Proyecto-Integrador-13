@@ -40,5 +40,19 @@
   "email": "martinleibo@gmail.com",
   "imagen": "1667189494124.jpg",
   "password": "$2a$10$aDws3ePl0SUOdQtjEBkwuuLDGmIHTy6xrrNG6xazebxj8qoFrDieC"
+ },
+ {
+  "id": 13,
+  "name": "Bruno Fazio",
+  "email": "Bofo@gmail.com",
+  "imagen": "1667662291131.jpg",
+  "password": "$2a$10$0AFDs441xe/hLRr24GgSS.N0CR7L2U9p7eIFfh2Uy.O.D5CKP0kiW"
+ },
+ {
+  "id": 14,
+  "name": "Fazio Bruno",
+  "email": "bruno@gmail.com",
+  "imagen": "1667685188304.jfif",
+  "password": "$2a$10$5B4ufUwNuEVzbvPWU53R0uZrNJT/NmA0pPsbmAtbyZOdGgc5Al5oS"
  }
 ]

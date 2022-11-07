@@ -4,6 +4,8 @@ const path = require('path');
 
 //Bcryptjs para hashear la password
 const bcrypt = require('bcryptjs');
+//esto permite al usuario logeado acceder a la variable session en desde cualquier pagina
+const session = require('express-session');
 
 //Trae los errores de express-validator
 const {validationResult, body} = require('express-validator');
@@ -21,6 +23,33 @@ login :  (req,res) =>{
     res.render('user/login');  
 },
 
+processLogin : (req, res) =>{
+    let errors = validationResult(req)
+
+    //Verifica si hubo errores en el form, si no hay errores se fija si el email y la contraseña esten en la base de datos, si hay errores devuelve la misma vista con los mensaje de error
+    if (errors.isEmpty()) {
+        for(let i = 0; users.length; i++){
+            if(users[i].email == req.body.email){
+                if(bcrypt.compareSync(req.body.password, users[i].password)){
+                    let usuarioALogearse = users[i];
+                    break;
+                }
+            }
+        }
+        //si bno coincide el mail o la contraseña usuarioALogearse no se crea por lo tanto es undefine y te tira un error manual en el formulario 
+        if(usuarioALogearse == undefined){
+            return res.render('user/login', { errors: [
+                {msg:'Credenciales invalidas'}
+            ]})
+        }
+        /// aca estaria guardando al usuario en session una variable que se comparte en todo el proyecto 
+        req.session.usuarioLogeado = usuarioALogearse;
+        res.redirect('/') //si todo sale bien te manda al home donde tendria que verse el header con el apartado usuario pero todavia no esta la vista dinamica
+    }else{
+        return res.render( 'user/login', {errors : errors.mapped(), old: req.body})
+    }
+},
+
 //render de la vista del form de registro del usuario
 registroUsuario : (req,res) =>{
     res.render('user/registro');               
@@ -30,7 +59,7 @@ registroUsuario : (req,res) =>{
 crearUsuario : (req,res) => {
     let datos = req.body;
     
-    const errors = validationResult(req)
+    let errors = validationResult(req)
 
     //Verifica si hubo errores en el form, si no hay errores continua con la creacion del usuario, si hay errores devuelve la misma vista con los mensaje de error
     if (errors.isEmpty()) {

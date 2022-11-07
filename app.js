@@ -5,12 +5,16 @@ const express = require('express');
 const path = require ('path');
 const app = express();
 const methodOverride =  require('method-override'); //Para PUT y DELETE
+const session = require('express-session');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use( express.static('public') );
+app.use(session({secret: 'Secreto!'}))//nos permite identificar nuestro sitio web y que la info sea mas segura
+
 app.set('view engine', 'ejs'); 
 app.set('views',path.join(__dirname,'./src/views'));
+
 
 
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE

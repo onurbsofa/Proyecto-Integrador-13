@@ -26,7 +26,7 @@
         </div>
         
         <!-- form + captcha + botón + parrafo --> 
-        <form action="/registro" method="post" id="formulario1" class="container1"> 
+        <form action="login" method="POST" id="formulario1" class="container1"> 
             <div >   
                 <div>
                     <!--Grupo Email-->
@@ -36,19 +36,25 @@
                             <span class="input-group-text" id="addon-wrapping">@</span>
                             <input type="email" name="email" class="form-control input" placeholder="Ejemplo@mail.com" id="email" required>
                         </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="feedback"><%= errors.email.msg %></p>
+                        <% } %>  
                     </div>
 
                     <!--Grupo Contraseña-->
                     <div class="celda" id="campos_contraseña">       <!-- FALTA AGREGAR OPCION VER CONTRASEÑA -->
                         <label for="contraseña">Contraseña<span class="asterisco">*</span></label>
                         <div>
-                            <input type="password" id="contraseña" class="form-control input" name="contraseña" placeholder="Ej: Contraseña123" required>
+                            <input type="password" id="contraseña" class="form-control input" name="password" placeholder="Ej: Contraseña123" required>
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="feedback"><%= errors.password.msg %></p>
+                            <% } %>
                         </div>
                     </div>
                 </div>
             
                 <div>
-                    <button type="submit" class="boton color_especial">Iniciar sesión</button>
+                    <button type="submit" value="login" class="boton color_especial">Iniciar sesión</button>
                     <p>¿No tenes una cuenta? <a href="/user/registro" class="color_especial redireccion">Registrate</span></p> 
                     <p id="rc"><a href="/user/rec_contra" class="color_especial redireccion">¿Olvidaste tu contraseña?</a></p>
                 </div>
