@@ -1,86 +1,9 @@
 [
  {
-  "id": 7,
-  "name": "martinasdasd",
-  "email": "martinleibo@g.com",
-  "imagen": "1667187700993.jpeg",
-  "password": "$2a$10$busx/zGurP45NzJD2cq2Te08M7WpT/bdTqQDW912CBxigu7ZvoHxO"
- },
- {
-  "id": 8,
-  "name": "martin",
-  "email": "a@a.comasda",
-  "imagen": "1667188455538.jpg",
-  "password": "$2a$10$p66HS6nYcINUKHuLsRGlOOVyYldcZE.FazMLKQMjOobO/MKQL.Dn2"
- },
- {
-  "id": 9,
-  "name": "asdasdas",
-  "email": "a@ksdfsdfssssd.com",
-  "imagen": "1667188682212.jpeg",
-  "password": "$2a$10$86mlwaScQ5ghk1TSnFWw1O26DvuFd.9XTcTprB4JhKUeo4j/dW3zi"
- },
- {
-  "id": 10,
-  "name": "martin",
-  "email": "asdasd@asd.com",
-  "imagen": "1667188731209.jpg",
-  "password": "$2a$10$MZzp5nPh1cmcygBjOoxLv.UEGW3V5dsPs5thC3GFEN6q232JSCB.6"
- },
- {
-  "id": 11,
-  "name": "MARTIN123",
-  "email": "123@gmail.com",
-  "imagen": "1667189429892.jpeg",
-  "password": "$2a$10$zGjilglLl5sTZ49cVxhLe.VBqTQmsbnUakCbU5EPXppPmaikdFtjm"
- },
- {
-  "id": 12,
-  "name": "martin",
+  "id": 1,
+  "name": "Martin L",
   "email": "martinleibo@gmail.com",
-  "imagen": "1667189494124.jpg",
-  "password": "$2a$10$aDws3ePl0SUOdQtjEBkwuuLDGmIHTy6xrrNG6xazebxj8qoFrDieC"
- },
- {
-  "id": 13,
-  "name": "Bruno Fazio",
-  "email": "Bofo@gmail.com",
-  "imagen": "1667662291131.jpg",
-  "password": "$2a$10$0AFDs441xe/hLRr24GgSS.N0CR7L2U9p7eIFfh2Uy.O.D5CKP0kiW"
- },
- {
-  "id": 14,
-  "name": "Fazio Bruno",
-  "email": "bruno@gmail.com",
-  "imagen": "1667685188304.jfif",
-  "password": "$2a$10$5B4ufUwNuEVzbvPWU53R0uZrNJT/NmA0pPsbmAtbyZOdGgc5Al5oS"
- },
- {
-  "id": 15,
-  "name": "martin",
-  "email": "martinleibo2@gmail.com",
-  "imagen": "1667800774191.png",
-  "password": "$2a$10$UlNNKGAIE68F90Qam18Kf.rTS1MFUh1CuXU2lfxE/tn2wH7qs6rdm"
- },
- {
-  "id": 16,
-  "name": "martin",
-  "email": "martinleibo233@gmail.com",
-  "imagen": "1667803356041.jpg",
-  "password": "$2a$10$PpTC2EtWUrl8sI1zII4UPOveBZkrZZmq4Wm4nmnoMw9gFNjbJZp4K"
- },
- {
-  "id": 17,
-  "name": "Martin L",
-  "email": "martin123@gmail.com",
-  "imagen": "1667808981042.png",
-  "password": "$2a$10$FHNPEBB1KUBDVm4pljn2h.ab4tLjc0SJp.3yrnwAyVGva377flEmy"
- },
- {
-  "id": 18,
-  "name": "Martin L",
-  "email": "martinl@gmail.com",
-  "imagen": "1667809087139.png",
-  "password": "$2a$10$qU3GYIfaLo7xaMe3E7dMvOeHJXo16.AEEEcIHMKg7yBd1WFx6/rhW"
+  "imagen": "1667810475194.png",
+  "password": "$2a$10$9Nj9Ov93XET.QOb9KlmxMu5XUbyRvyy3dJAjFyyqxW0Ihun94X.4y"
  }
 ]
