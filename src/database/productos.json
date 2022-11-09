@@ -53,5 +53,27 @@
   "cuerpo": "a",
   "intensidad": "a",
   "descripcion": "a"
+ },
+ {
+  "id": 10,
+  "nombre": "Nombre del producto 123456",
+  "imagen": "1668035854817.png",
+  "precio": 11,
+  "cantidad": 2,
+  "pais": "colombia",
+  "cuerpo": "complejo",
+  "intensidad": "suave",
+  "descripcion": "asdasdasdasda"
+ },
+ {
+  "id": 11,
+  "nombre": "cafe bolsa",
+  "imagen": "1668036222116.png",
+  "precio": 111,
+  "cantidad": 2,
+  "pais": "colombia",
+  "cuerpo": "simple",
+  "intensidad": "suave",
+  "descripcion": "desc"
  }
 ]
