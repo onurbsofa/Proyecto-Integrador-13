@@ -20,6 +20,7 @@ const userControllers = {
 
 //render de la vista del form de login del usuario
 login :  (req,res) =>{
+    console.log('HOLA')
     res.render('user/login');  
 },
 
@@ -65,11 +66,13 @@ processLogin : (req, res) =>{
 
 //render de la vista del form de registro del usuario
 registroUsuario : (req,res) =>{
+    
     res.render('user/registro');               
 },
 
 //Se encarga del funcionamiento del form de registro de un usuario nuevo
 crearUsuario : (req,res) => {
+    
     let datos = req.body;
     
     let errors = validationResult(req)
@@ -93,20 +96,27 @@ crearUsuario : (req,res) => {
 
         };
 
+        console.log(nuevoUser)
+
         //escribe el nuevo user en el JSON
         users.push(nuevoUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
         console.log(users);
 
+        console.log(users)
+
         //reenvia al login para que el usuario inicie session
         res.redirect('/user/login')
    } else {
+
+        console.log('no anda!!!!!!!!')
 
         //elimina la imagen que acabamos de subir
         if(req.file) {
 		    fs.unlinkSync(__dirname+'/../../public/img/'+req.file.filename);
 		}
         
+        console.log('redireccion!!')
        //devuelve la misma vista con los mensajes de error
        return res.render('user/registro', {errors : errors.mapped(), old: req.body})
 

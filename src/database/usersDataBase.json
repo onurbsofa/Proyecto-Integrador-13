@@ -12,5 +12,12 @@
   "email": "bruno@gmail.com",
   "imagen": "1667825403946.jpg",
   "password": "$2a$10$luy.hOa4mhsGiXwr7t44d.n3HE5Leg6s4sqDPCpDgKkM60B8Nbjxe"
+ },
+ {
+  "id": 3,
+  "name": "martin2",
+  "email": "martin2@gmail.com",
+  "imagen": "1668036137960.png",
+  "password": "$2a$10$/FdSW7lQQmyyCLDrcYpAf.xL8i/kxy.MHd/IzjCEnzhL69LAGPZt."
  }
 ]
