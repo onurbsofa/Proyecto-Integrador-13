@@ -11,7 +11,7 @@ const session = require('express-session');
 const {validationResult, body} = require('express-validator');
 
 //Lee los usuarios del JSON y los guarda en la variable users
-const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
+const usersFilePath = path.join(__dirname, '/../database/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
