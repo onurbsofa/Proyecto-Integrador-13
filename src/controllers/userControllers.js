@@ -96,6 +96,7 @@ crearUsuario : (req,res) => {
         //escribe el nuevo user en el JSON
         users.push(nuevoUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
+        console.log(users);
 
         //reenvia al login para que el usuario inicie session
         res.redirect('/user/login')
