@@ -6,6 +6,10 @@ const productsFilePath = path.join(__dirname, '../database/productos.json');
 const productosJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
+//base de datos
+let db = require('../database/models')
+
+
 const productControllers = {
     listadoProductos : (req,res) => {
     
@@ -44,7 +48,32 @@ const productControllers = {
     // Para crear un nuevo producto
 	crear: (req, res) => {
 		let datos = req.body;
-		console.log(req)
+		
+		db.pais.findOne({
+			where : {nombre: datos.pais}
+		}).then((resultadoPais) => {
+			db.cuerpo.findOne({
+				where : {nombre: datos.cuerpo}
+			}).then((resultadoCuerpo) => {
+				db.intensidad.findOne({
+					where : {nombre: datos.intensidad}
+				}).then((resultadoIntensidad) => {
+			
+			
+		
+
+		db.producto.create({
+            nombre : datos.nombre,
+            precio : parseInt(datos.precio),
+            imagen : req.file.filename,
+            descripcion : datos.descripcion,
+            pais_id : resultadoPais.id,
+			cuerpo_id : resultadoCuerpo.id,
+			intensidad_id: resultadoIntensidad.id
+          
+          }).then(function(x){
+          
+
 
 
         let idNuevoProducto = 0
@@ -71,8 +100,11 @@ const productControllers = {
         //Escribe el nuevo listado de productos en JSON
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosJson, null, " "), 'utf-8');
 
-        //Reenvia a la vista del detalle de producto que acabamos de crear
-		res.redirect('/product/detalle-producto/'+idNuevoProducto);
+        //Reenvia a la vista listado de productos
+		res.redirect('/product/listado-de-productos');
+
+		})
+		})})}) //terminan los then de las tablas con los ids de pais, cuerpo e intensidad
 	},
 
     //Ver el producto a editar

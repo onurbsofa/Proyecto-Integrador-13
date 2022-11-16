@@ -39,4 +39,21 @@ app.use("/product", productRoutes);
 app.use("/user", userRoutes);
 
 
+/// PRUEBA - ELIMINAR
+
+
+
+// let db = require('./src/database/models')
+
+    
+
+// db.usuario.create({
+//     nombre : "asfdasdasdasdadasd",
+//     email : "asdas@fasfa.com",
+//     clave : "asdasdasdlsadklas",
+//     imagen : "dasdasd.jpg",
+//     admin : 1
+  
+//   })
+
 

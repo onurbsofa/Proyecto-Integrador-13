@@ -75,5 +75,60 @@
   "cuerpo": "simple",
   "intensidad": "suave",
   "descripcion": "desc"
+ },
+ {
+  "id": 12,
+  "nombre": "Nombre del producto 9",
+  "imagen": "1668575526670.png",
+  "precio": 11,
+  "cantidad": 1,
+  "pais": "1",
+  "cuerpo": "1",
+  "intensidad": "1",
+  "descripcion": "desc"
+ },
+ {
+  "id": 13,
+  "nombre": "ABCD",
+  "imagen": "1668578293733.png",
+  "precio": 123,
+  "cantidad": 1,
+  "pais": "1",
+  "cuerpo": "1",
+  "intensidad": "1",
+  "descripcion": "asdasd"
+ },
+ {
+  "id": 14,
+  "nombre": "cafe cafe",
+  "imagen": "1668581166737.png",
+  "precio": 22,
+  "cantidad": null,
+  "pais": "2",
+  "cuerpo": "3",
+  "intensidad": "2",
+  "descripcion": "desc"
+ },
+ {
+  "id": 15,
+  "nombre": "BRASIL",
+  "imagen": "1668582825941.png",
+  "precio": 222,
+  "cantidad": null,
+  "pais": "brasil",
+  "cuerpo": "1",
+  "intensidad": "1",
+  "descripcion": "asdasd"
+ },
+ {
+  "id": 16,
+  "nombre": "Mexico",
+  "imagen": "1668583086434.png",
+  "precio": 111,
+  "cantidad": null,
+  "pais": "mexico",
+  "cuerpo": "complejo",
+  "intensidad": "intenso",
+  "descripcion": "mexico"
  }
 ]

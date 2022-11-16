@@ -3,13 +3,21 @@ const path = require('path');
 
 const { check } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//base de datos
+let db = require('../database/models')
+
+
+//JSON ya NO lo usamos - ELIMINAR
+// const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 
 const validateRegister = [
     //Verifica que el nombre cumpla los requisitos
+
+
+
     check('name')
         .notEmpty().withMessage('Debes completar el nombre').bail()
         .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
@@ -23,13 +31,18 @@ const validateRegister = [
         .custom(async (email, {req}) => {
             const emailIngresado = req.body.email;
 
-            const encontrado = users.find(element => element.email == emailIngresado);
+            db.usuario.findAll().then(function(usersDb){
+
+
+            const encontrado = usersDb.find(element => element.email == emailIngresado);
+            //const encontrado = users.find(element => element.email == emailIngresado);
 
        
             // Si los emails coinciden devuelve este error
             if(encontrado){
               throw new Error('El email ya se encuentra registrado, por favor selecciona otro')
             }
+          })
           }),        
         
     
@@ -49,8 +62,8 @@ const validateRegister = [
         if(password !== confirmPassword){
           throw new Error('Las contraseñas deben coincidir')
         }
-      }),        
-
+      })        
+    
 
 ]
 

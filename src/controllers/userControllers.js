@@ -10,9 +10,14 @@ const session = require('express-session');
 //Trae los errores de express-validator
 const {validationResult, body} = require('express-validator');
 
+//JSON ya NO lo usamos - ELIMINAR
 //Lee los usuarios del JSON y los guarda en la variable users
-const usersFilePath = path.join(__dirname, '/../database/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '/../database/usersDataBase.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
+//base de datos
+let db = require('../database/models')
 
 
 
@@ -36,11 +41,22 @@ processLogin : (req, res) =>{
 
     //Verifica si hubo errores en el form, si no hay errores se fija si el email y la contraseña esten en la base de datos, si hay errores devuelve la misma vista con los mensaje de error
 
+    //promise de la base de datos, creamos la variable usersDb (array de usuarios) para luego iterar y encontrar el usuario requerido
+    db.usuario.findAll().then(function(usersDb){
+
     if (errors.isEmpty()) {
-        for(let i = 0; i < users.length; i++){    //esto lo corregi, le faltaba el "i <" (Martin)
-            if(users[i].email == req.body.email){
-                if(bcrypt.compareSync(req.body.password, users[i].password)){
-                    var usuarioALogearse = users[i];
+
+        
+        for(let i = 0; i < usersDb.length; i++){    
+            if(usersDb[i].email == req.body.email){
+     
+                //compara passwords
+                if(bcrypt.compareSync(req.body.password, usersDb[i].clave)){
+                    
+
+                    var usuarioALogearse = usersDb[i];
+
+                    
                     break;
                 }
             }
@@ -53,6 +69,7 @@ processLogin : (req, res) =>{
         }
         /// aca estaria guardando al usuario en session una variable que se comparte en todo el proyecto 
         req.session.usuarioLogeado = usuarioALogearse;
+        
 
         //Se crea la cookie si el usuario hizo click en Recordarme
         if (req.body.remember_user) {
@@ -62,6 +79,7 @@ processLogin : (req, res) =>{
     }else{      
         return res.render( 'user/login', {errors : errors.mapped(), old: req.body})
     }
+    })
 },
 
 //render de la vista del form de registro del usuario
@@ -79,34 +97,51 @@ crearUsuario : (req,res) => {
 
     //Verifica si hubo errores en el form, si no hay errores continua con la creacion del usuario, si hay errores devuelve la misma vista con los mensaje de error
     if (errors.isEmpty()) {
+
+        //Crea registro del usuario en la base de datos
+        db.usuario.create({
+            nombre : datos.name,
+            email : datos.email,
+            clave : bcrypt.hashSync(datos.password,10),
+            imagen : req.file.filename,
+            admin : 1
+          
+          }).then(function(x){
+          
+
+            //JSON - ELIMINAR cuando funcionen las bases de datos
+
         //verifica si ya existe al menos un usuario en nuestra base de datos, si no existe le asigna el id 1 al que creamos, si existe le asigna el id que sigue
-        if (users[0]){
-        var idNuevoUser = (users[users.length-1].id)+1;
-        } else {
-        idNuevoUser = 1
-        }
+        // if (users[0]){
+        // var idNuevoUser = (users[users.length-1].id)+1;
+        // } else {
+        // idNuevoUser = 1
+        // }
 
 
-        let nuevoUser = {
-            "id" : parseInt(idNuevoUser),
-            "name" : datos.name,
-            "email" : datos.email,
-            "imagen": req.file.filename,
-            "password" : bcrypt.hashSync(datos.password,10),
+        // let nuevoUser = {
+        //     "id" : parseInt(idNuevoUser),
+        //     "name" : datos.name,
+        //     "email" : datos.email,
+        //     "imagen": req.file.filename,
+        //     "password" : bcrypt.hashSync(datos.password,10),
 
-        };
+        // };
 
-        console.log(nuevoUser)
+        
 
-        //escribe el nuevo user en el JSON
-        users.push(nuevoUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
-        console.log(users);
+        // //escribe el nuevo user en el JSON
+        // users.push(nuevoUser);
+        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
+        
 
-        console.log(users)
+        //Eliminar codigos de JSON HASTA ACA, NO LO DE ABAJO !!!
+        
 
         //reenvia al login para que el usuario inicie session
         res.redirect('/user/login')
+
+        })
    } else {
 
         console.log('no anda!!!!!!!!')
@@ -126,6 +161,13 @@ crearUsuario : (req,res) => {
 
 
 
+},
+
+list : (req,res) => {
+    db.usuario.findAll()
+        .then(function(x){
+            res.send(x)
+        })
 },
 
 recContra : (req,res) =>{

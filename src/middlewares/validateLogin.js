@@ -3,8 +3,12 @@ const path = require('path');
 
 const { check } = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//base de datos
+let db = require('../database/models')
+
+//JSON ya NO lo usamos - ELIMINAR
+// const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 
@@ -20,13 +24,17 @@ const validateLogin = [
         .custom(async (email, {req}) => {
             const emailIngresado = req.body.email;
 
-            const encontrado = users.find(element => element.email == emailIngresado);
+            db.usuario.findAll().then(function(usersDb){
 
-       
+            const encontrado = usersDb.find(element => element.email == emailIngresado);
+
+              
             // Si el mail no existe
             if(!encontrado){
               throw new Error('El mail no corresponde a un usuario registrado')
-            } 
+            }
+          })
+          
           }),        
         
     

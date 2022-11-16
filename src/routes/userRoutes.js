@@ -41,6 +41,11 @@ router.get('/registro', userControllers.registroUsuario);
 //post del form de registro con middleware validador
 router.post('/registro', uploadFile.single('imagen'), validateRegister, userControllers.crearUsuario); 
 
+//lista usuarios
+router.get('/list', userControllers.list);
+
+
+
 
 
 module.exports = router;

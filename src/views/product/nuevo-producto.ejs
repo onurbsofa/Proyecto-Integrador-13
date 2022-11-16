@@ -43,27 +43,42 @@
             </div>
 
             <!-- cantidad de producto -->
-            <div class="col-xl-6 col-xs-12">
+            <!-- <div class="col-xl-6 col-xs-12">
                 <label for="validationDefault05" class="form-label">Cantidad en el inventario</label>
                 <input type="number" class="form-control" name="cantidad"  id="validationDefault05" required>
-              </div>
+              </div> -->
             
             <!-- pais del producto -->
             <div class="col-6 col-xs-12">
               <label for="validationDefault01" class="form-label">Pais</label>
-              <input type="text" class="form-control" name="pais" id="validationDefault01" required>
+              <select id="validationDefault01" name="pais" required class="form-control">
+                <option value="colombia">colombia</option>
+                <option value="mexico">mexico</option>
+                <option value="brasil">brasil</option>
+              </select>
+              <!-- <input type="text" class="form-control" name="pais" id="validationDefault01" required> -->
             </div>
 
             <!-- cuerpo del producto -->
             <div class="col-6">
               <label for="validationDefault01" class="form-label">Cuerpo</label>
-              <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required>
+              <select id="validationDefault01" name="cuerpo" required class="form-control">
+                <option value="simple">simple</option>
+                <option value="medio">medio</option>
+                <option value="complejo">complejo</option>
+              </select>
+              <!-- <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required> -->
             </div>
 
             <!-- intensidad del producto -->
             <div class="col-6">
               <label for="validationDefault01" class="form-label">Intensidad</label>
-              <input type="text" class="form-control" name="intensidad" id="validationDefault01" required>
+              <select id="validationDefault01" name="intensidad" required class="form-control">
+                <option value="suave">suave</option>
+                <option value="medio">medio</option>
+                <option value="intenso  ">intenso</option>
+              </select>
+              <!-- <input type="text" class="form-control" name="intensidad" id="validationDefault01" required> -->
             </div>
 
             <!-- descripcion del producto -->

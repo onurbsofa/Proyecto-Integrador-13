@@ -1,7 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+//JSON ya NO lo usamos - ELIMINAR
+//const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+//base de datos
+let db = require('../database/models')
 
 
 function loggedMw (req,res,next) {
@@ -10,7 +15,13 @@ function loggedMw (req,res,next) {
     res.locals.isLogged = false
 
     //Busca el mail del usuario que se logeo, si hizo click en Recordarme (tiene la cookie en su browser)
-    let userInCookie = users.find(element => element.email == req.cookies.userEmail )
+    
+    //Esto es del JSON - ELIMINAR
+    //let userInCookie = users.find(element => element.email == req.cookies.userEmail )
+
+    db.usuario.findAll().then(function(usersDb){
+
+        const userInCookie = usersDb.find(element => element.email == req.cookies.userEmail);
 
     //Si lo encuentra guarda el usuario en la session
     if (userInCookie) {
@@ -24,6 +35,8 @@ function loggedMw (req,res,next) {
     }
 
     next()
+
+    })
 }
 
 module.exports = loggedMw;
