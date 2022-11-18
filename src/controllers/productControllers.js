@@ -194,7 +194,15 @@ const productControllers = {
 		res.redirect('/product/detalle-producto/'+idProducto);
 	},
 	borrarProducto: (req, res) => {
-		//console.log("si llego");
+		
+		db.producto.destroy({
+			where: {
+				id: req.params.id
+			}
+		})
+
+
+		/*//console.log("si llego");
 		let idProducto = req.params.id;
 		let cont=0;
 		let nombreImagenAntigua = "";
@@ -212,7 +220,7 @@ const productControllers = {
 		fs.writeFileSync(productsFilePath,JSON.stringify(productosJson, null, " "),'utf-8');
 
 		//Elimina la imagen actual
-		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
+		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua); */
 
 		//Reenvia a la vista del detalle de producto que acabamos de editar
 		res.redirect('/../product/listado-de-productos');
