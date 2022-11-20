@@ -12,14 +12,23 @@ let db = require('../database/models')
 
 const productControllers = {
     listadoProductos : (req,res) => {
-    
+		db.producto.findAll()// busca todos los registros del modelo con ese alias 
+			.then(function(producto){
+				res.render('product/listado-de-productos', {producto:producto})//comparte la variable del modelo con la vista
+			})
 		
-        res.render('product/listado-de-productos', {productosJson});
+        
     },
     
     detalleProducto : (req,res) => {
+		db.producto.findByPk(req.params.id)
+			.then(function(producto){
+				res.render('product/detalle-producto',{producto:producto})
+			})
 
-        //Que ID estoy viendo
+
+
+        /* //Que ID estoy viendo
         let idProducto = req.params.id;
 
 		let productoBuscado=null;
@@ -39,8 +48,9 @@ const productControllers = {
 
         //Si no encuentra el producto con ese ID envia este mensaje
 		res.send("Producto no encontrado");
-
+ */
     },
+
     nuevoProducto : (req,res) => {
         res.render('product/nuevo-producto', {productosJson});
     },
@@ -78,7 +88,7 @@ const productControllers = {
 
         let idNuevoProducto = 0
 
-        if (productosJson.length > 0){
+       /*  if (productosJson.length > 0){
 		idNuevoProducto = (productosJson[productosJson.length-1].id)+1;
         } else {idNuevoProducto = 1 }
 
@@ -100,7 +110,7 @@ const productControllers = {
         //Escribe el nuevo listado de productos en JSON
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosJson, null, " "), 'utf-8');
 
-        //Reenvia a la vista listado de productos
+        //Reenvia a la vista listado de productos */
 		res.redirect('/product/listado-de-productos');
 
 		})
@@ -184,7 +194,15 @@ const productControllers = {
 		res.redirect('/product/detalle-producto/'+idProducto);
 	},
 	borrarProducto: (req, res) => {
-		//console.log("si llego");
+		
+		db.producto.destroy({
+			where: {
+				id: req.params.id
+			}
+		})
+
+
+		/*//console.log("si llego");
 		let idProducto = req.params.id;
 		let cont=0;
 		let nombreImagenAntigua = "";
@@ -202,7 +220,7 @@ const productControllers = {
 		fs.writeFileSync(productsFilePath,JSON.stringify(productosJson, null, " "),'utf-8');
 
 		//Elimina la imagen actual
-		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
+		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua); */
 
 		//Reenvia a la vista del detalle de producto que acabamos de editar
 		res.redirect('/../product/listado-de-productos');

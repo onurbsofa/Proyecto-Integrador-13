@@ -50,22 +50,22 @@
             </div>
 
             <div class="col-lg-8">
-              <% for(let i = 0; i < productosJson.length; i++){ %> 
+              <% for(let i = 0; i < producto.length; i++){ %> 
               <div class="row">
                 <div class="col-lg-6">
                   <div class="producto-item">
                     <div class="thumb">
                       <div class="price">
-                        <span><%= productosJson[i].precio %></span>
+                        <span><%= producto[i].precio %></span>
                       </div>
-                      <a href="/product/detalle-producto/<%= productosJson[i].id %>"><img width="300px" height="300px" src="/img/<%= productosJson[i].imagen %>" alt="New Lecturer Meeting"></a>
+                      <a href="/product/detalle-producto/<%= producto[i].id %>"><img width="300px" height="300px" src="/img/<%= producto[i].imagen %>" alt="New Lecturer Meeting"></a>
                     </div>
                     <div class="abajo-item">
-                      <div class="date">
-                        <h6><span><%= productosJson[i].fecha %></span></h6>
-                      </div>
-                      <a href="/product/detalle-producto/<%= productosJson[i].id %>"><h4><%= productosJson[i].nombre %></h4></a>
-                      <p><%= productosJson[i].descripción %></p>
+                        <div class="date">
+                        <h6><span><%= producto[i].precio%></span></h6>
+                        </div> 
+                      <a href="/product/detalle-producto/<%= producto[i].id %>"><h4><%= producto[i].nombre %></h4></a>
+                      <p><%= producto[i].descripción %></p>
                     </div>
                   </div>
                 </div>
