@@ -59,19 +59,36 @@
               <option>500 GR</option>
               <option>1 KG</option>
             </select>
-        </div> -->
-        <div class="col-xl-4 col-md-6 col-xs-6">
+        </div> --> 
+      <!-- pais del producto -->
+        <div class="col-6 col-xs-12">
           <label for="validationDefault01" class="form-label">Pais</label>
-          <input type="text" class="form-control" name="pais" id="validationDefault01" value = <%= producto.pais %> required>
+          <select id="validationDefault01" name="pais" required class="form-control" value = <%= producto.pais %> required>
+            <option value="colombia">colombia</option>
+            <option value="mexico">mexico</option>
+            <option value="brasil">brasil</option>
+          </select>
+          <!-- <input type="text" class="form-control" name="pais" id="validationDefault01" required> -->
         </div>
-        <div class="col-xl-4 col-md-6 col-xs-6">
-          <label for="validationDefault01" class="form-label">Cuerpo</label>
-          <input type="text" class="form-control" name="cuerpo" id="validationDefault01" value = <%= producto.cuerpo %> required>
-        </div>
-        <div class="col-xl-5 col-md-5 col-xs-5">
-          <label for="validationDefault01" class="form-label">Intensidad</label>
-          <input type="text" class="form-control" name="intensidad" id="validationDefault01" value = <%= producto.intensidad %> required>
-        </div>
+       <!-- cuerpo del producto -->
+       <div class="col-6">
+        <label for="validationDefault01" class="form-label">Cuerpo</label>
+        <select id="validationDefault01" name="cuerpo" required class="form-control" value = <%= producto.cuerpo %> required>
+          <option value="simple">simple</option>
+          <option value="medio">medio</option>
+          <option value="complejo">complejo</option>
+        </select>
+        <!-- <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required> -->
+      <!-- intensidad del producto -->
+      <div class="col-6">
+        <label for="validationDefault01" class="form-label">Intensidad</label>
+        <select id="validationDefault01" name="intensidad" required class="form-control" value = <%= producto.intensidad %> required>
+          <option value="suave">suave</option>
+          <option value="medio">medio</option>
+          <option value="intenso  ">intenso</option>
+        </select>
+        <!-- <input type="text" class="form-control" name="intensidad" id="validationDefault01" required> -->
+      </div>
         <div class="col-xl-7 col-md-7 col-xs-7">
             <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto </label>
             <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows="3"><%= producto.descripcion %></textarea>

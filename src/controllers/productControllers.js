@@ -119,8 +119,16 @@ const productControllers = {
 
     //Ver el producto a editar
     editarProducto : (req,res) => {
+		db.producto.findByPk(req.params.id)
+			.then(function(producto){
+				res.render('product/editar-producto', {producto : producto})
+			})
 
-        
+
+
+
+
+       /*  
         //Que ID estoy viendo
         let idProducto = req.params.id;
 
@@ -141,12 +149,72 @@ const productControllers = {
 
         //Si no encuentra el producto con ese ID envia este mensaje
 		res.send("Producto no encontrado");
-        
+         */
     },
 
     //Para acutalizar el producto desde el form de edicion
     actualizarProducto: (req, res) => {
-		let idProducto = req.params.id;
+		db.producto.update({
+			nombre : req.file.filename,
+			precio : parseInt(req.body.precio),
+			imagen : req.body.imagen,
+			descripcion : req.body.descripcion,
+			pais_id : req.body.pais_id,
+			cuerpo_id : req.body.cuerpo,
+			intensidad_id: req.body.intensidad
+		},
+		{
+			where:{
+				id:req.params.id
+			}
+		})
+		res.redirect('/product/detalle-producto/'+req.params.id); 	
+	},
+		/*intento de solucion fallido												
+		let nombreImagenAntigua = "";
+		let nuevaImagen = "";
+		let datos = req.body; */
+		/* db.producto.findByPk(req.params.id)
+			.then(function(producto){
+				nombreImagenAntigua = producto.imagen;
+				return nombreImagenAntigua;
+			})
+			.then(function(x){
+				if(req.file){
+				  nuevaImagen = req.file.filename
+				} else {
+					nuevaImagen = nombreImagenAntigua
+				}
+				return nuevaImagen
+			})
+			.then((req,res) =>{
+				db.producto.update({
+					nombre : datos.nombre,
+					precio : parseInt(datos.precio),
+					imagen : nuevaImagen,
+					descripcion : datos.descripcion,
+					pais_id : datos.pais,
+					cuerpo_id : datos.cuerpo,
+					intensidad_id: datos.intensida
+					},
+					{
+						where:{
+							id:req.params.id
+						}
+					})
+			})
+			.then((req,res) =>{
+				res.redirect('/product/detalle-producto/'+req.params.id);
+			})
+			.catch((error) => {
+				console.log(error)
+			}) */
+		
+	
+		
+		//solucin del json vieja
+		
+		/* let idProducto = req.params.id;
 
 		let datos = req.body;
 
@@ -189,10 +257,10 @@ const productControllers = {
 		if(req.file) {
 		fs.unlinkSync(__dirname+'/../../public/img/'+nombreImagenAntigua);
 		}
-
+ 		*/
         //Reenvia a la vista del detalle de producto que acabamos de editar
-		res.redirect('/product/detalle-producto/'+idProducto);
-	},
+
+
 	borrarProducto: (req, res) => {
 		
 		db.producto.destroy({
