@@ -1,12 +1,13 @@
 footer {
-    background: linear-gradient(207.8deg, #DB780F 16.69%, #593527 100%);
+    background: linear-gradient(207.8deg, #a75907 16.69%, #593527 100%);
     color: white;
-    width: 100vw;
+    width: 100%;
+    
 }
 
 #imagen-logo {
     width: 15vw;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 
@@ -15,6 +16,7 @@ footer {
     flex-flow: column wrap;
     width: 80vw;
     margin: auto;
+  
 }
 
 #footer-first-section > div {
@@ -25,6 +27,7 @@ footer {
 
 #footer-second-section {
     text-align: center;
+ 
 }
 
 #footer-first-section {
@@ -49,10 +52,12 @@ footer {
 #footer-first-section article p{
     margin: 0.1875rem 0;
     text-align: center;
+
 }
 
 #footer-first-section article {
     margin: 1rem 0;
+    margin-top: 80px;
 }
 
 #footer-second-section {
@@ -67,6 +72,7 @@ footer {
         width: 90vw; 
         flex-direction: row;       
         justify-content:space-around;
+        margin-top: 50px;
     }
 }
 @media screen and (max-width: 1199px){
@@ -77,6 +83,7 @@ footer {
 }
 @media screen and (max-width: 1199px){
 #imagen-logo {
-    width: 30vw;
+    width: 50vw;
+    margin-top: 50px;
 }
 }

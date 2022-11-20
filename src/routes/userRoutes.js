@@ -44,6 +44,10 @@ router.post('/registro', uploadFile.single('imagen'), validateRegister, userCont
 //lista usuarios
 router.get('/list', userControllers.list);
 
+//vista del usuario
+router.get('/vista-usuario', userControllers.vistaUsuario);
+
+
 
 
 

@@ -119,5 +119,16 @@
   "cuerpo": "complejo",
   "intensidad": "intenso",
   "descripcion": "mexico"
+ },
+ {
+  "id": 17,
+  "nombre": "cafe nuevo",
+  "imagen": "1668926245873.jpg",
+  "precio": 4,
+  "cantidad": null,
+  "pais": "mexico",
+  "cuerpo": "complejo",
+  "intensidad": "medio",
+  "descripcion": ""
  }
 ]
