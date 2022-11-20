@@ -14,22 +14,10 @@ body {
     font-size: 80.5%;
     font-family: 'Jost', sans-serif;   
 }
-#recomendado{
-    text-align:left;
-    margin: auto;
-    margin-top: 40px;
-    margin-left: 20px;
-}
-#detalles-productos{
-  margin-top: 70px;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
-}
+
  .boton-recomendado{       
-        width: 150px;
-        height: 40px;
+        width: 50%;
+    
         background-color: #DB780F;
         position: center;
         border: none;
@@ -37,7 +25,9 @@ body {
         color: white;
         font-size: 20px;
         margin-bottom: 20%;
+        margin-left: 25%;
         transition: all 0.5s ease-out;
+       
     }
   .boton-recomendado:hover,
   .boton-recomendado:focus {
@@ -60,7 +50,20 @@ body {
     height: 300px;
     transform: rotate(360deg);
   }
+  .productoimg{
+    display: block;
+    margin-top: 20px;
+    width: 100%
+  }
   
+  .nombre-producto-recomendado{
+    text-align: center;
+  
+  }
+  .row{
+    width: 100%;
+
+  }
 
   #recetas-titulo{
     text-align:left;

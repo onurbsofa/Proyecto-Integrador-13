@@ -20,7 +20,6 @@ h2{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	background-size:cover;
 	letter-spacing: 2px;
 	font-size: 3.5em;
@@ -43,17 +42,12 @@ h3{
 	margin: 3em auto;
     margin-top: 150px;
 	background: rgba(255, 255, 255, 0.95);
-	height: 500px;
-	width: 900px;
+	margin-bottom: 80px;
+	width: 100%;
 	padding: 1em;
     color: #DB780F;
 	display: flexbox;
-	
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	top: 0;	
+
 }
 button {
 	background-image: linear-gradient(to left, rgb(255, 199, 86) 0%, rgba(111, 54, 5, 0.995) 100%);

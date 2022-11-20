@@ -29,6 +29,12 @@ login :  (req,res) =>{
     res.render('user/login');  
 },
 
+//render de la vista usuario
+vistaUsuario:  (req,res) =>{
+    res.render('user/vista-usuario');  
+},
+
+
 //para hacer el logout del usuario, destruye la session y la cookie
 logout : (req,res) => {
     req.session.destroy()
@@ -175,5 +181,6 @@ recContra : (req,res) =>{
 }
 
 }
+
 
 module.exports = userControllers;
