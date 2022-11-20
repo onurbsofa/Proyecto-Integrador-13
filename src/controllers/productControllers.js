@@ -86,7 +86,7 @@ const productControllers = {
 
 
 
-        let idNuevoProducto = 0
+       /*  let idNuevoProducto = 0 */
 
        /*  if (productosJson.length > 0){
 		idNuevoProducto = (productosJson[productosJson.length-1].id)+1;
@@ -154,61 +154,61 @@ const productControllers = {
 
     //Para acutalizar el producto desde el form de edicion
     actualizarProducto: (req, res) => {
-		db.producto.update({
-			nombre : req.file.filename,
-			precio : parseInt(req.body.precio),
-			imagen : req.body.imagen,
-			descripcion : req.body.descripcion,
-			pais_id : req.body.pais_id,
-			cuerpo_id : req.body.cuerpo,
-			intensidad_id: req.body.intensidad
-		},
-		{
-			where:{
-				id:req.params.id
-			}
-		})
-		res.redirect('/product/detalle-producto/'+req.params.id); 	
-	},
-		/*intento de solucion fallido												
-		let nombreImagenAntigua = "";
+		let datos = req.body;
 		let nuevaImagen = "";
-		let datos = req.body; */
-		/* db.producto.findByPk(req.params.id)
-			.then(function(producto){
-				nombreImagenAntigua = producto.imagen;
-				return nombreImagenAntigua;
-			})
-			.then(function(x){
+
+		//si se sube una imagen la guarda en la variable nnueva imagen 
+		//pero si no se sube una imagen, obtiene el nombre de la imagen del producto y la guarda en nueva imagen, 
+		let imagenDelProducto = 
+			db.producto.findByPk(producto.params.id).then(function(producto){
 				if(req.file){
-				  nuevaImagen = req.file.filename
+					nuevaImagen = req.file.filename
 				} else {
-					nuevaImagen = nombreImagenAntigua
+					nuevaImagen = producto.imagen
 				}
-				return nuevaImagen
-			})
-			.then((req,res) =>{
+				return nuevaImagen;
+			});
+		//obtiene el pais del producto y lo guarda en una variable
+		let paisProducto =
+			db.pais.findOne({
+				where : {nombre: datos.pais}
+			}).then((resultadoPais) => {
+				return resultadoPais
+			});
+		//obtiene el cuerpo del producto y lo guarda en una variable
+		let cuerpoProducto = 
+			db.cuerpo.findOne({
+				where : {nombre: datos.cuerpo}
+			}).then((resultadoCuerpo) => {
+				return resultadoCuerpo
+			});
+		//obtiene la iuntensidad del producto y lo guarda en una variable
+		let intensidadProducto = 
+			db.intensidad.findOne({
+				where : {nombre: datos.intensidad}
+			}).then((resultadoIntensidad) => {
+				return resultadoIntensidad
+			});
+		//espera que las demas promesas se terminen de ejecutar y guardar
+		Promise.all([imagenDelProducto,paisProducto,cuerpoProducto,intensidadProducto])
+			.then(function(imagen,pais,cuerpo,intensidad){
 				db.producto.update({
 					nombre : datos.nombre,
 					precio : parseInt(datos.precio),
-					imagen : nuevaImagen,
+					imagen : imagen,
 					descripcion : datos.descripcion,
-					pais_id : datos.pais,
-					cuerpo_id : datos.cuerpo,
-					intensidad_id: datos.intensida
-					},
-					{
-						where:{
-							id:req.params.id
-						}
-					})
+					pais_id : pais.id,
+					cuerpo_id : cuerpo.id,
+					intensidad_id: intensidad.id
+				})
 			})
-			.then((req,res) =>{
-				res.redirect('/product/detalle-producto/'+req.params.id);
+			.catch((error) =>{
+				console.log(error);
 			})
-			.catch((error) => {
-				console.log(error)
-			}) */
+			
+		res.redirect('/product/detalle-producto/'+req.params.id);
+	},
+		
 		
 	
 		
