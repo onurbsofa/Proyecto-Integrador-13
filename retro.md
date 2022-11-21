@@ -27,3 +27,11 @@ Comentamos mucho mas el codigo, es es bastante positivo. Tenemos que ser muy pro
 Para el proximo intentemos no dejarlo para el ultimo dia, es bastante mas complicado y no tenemos mucho tiempo.
 
 Cristina estuvo ausente por motivos personales. William y Fede no aparecieron ni este ni el anterior sprint.
+
+
+
+Retrospectiva:sprint 6
+
+Seguimos comentando el codigo. Nos organizamos mejor y empezamos a trabajar lo antes posible, sabiendo que el sprint era dificil. Nos demoro un poco la configuracion de la base de datos.
+
+Estuvimos mas organizados y con mejor comunicacion que en sprints anteriores, utilizamos el breakout room para despejar dudas con los profesores. 
