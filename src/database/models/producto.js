@@ -23,34 +23,30 @@ function productoData(sequelize, Datatypes){
         producto.belongsTo(modelos.pais, {   
           as: "pais",
           foreignKey: "pais_id"
-        });
-    
-    }
-
-    producto.associate = function (modelos){
+        })
 
         producto.belongsTo(modelos.cuerpo, {   
           as: "cuerpo",
           foreignKey: "cuerpo_id"
         });
-    
-    }
-
-    producto.associate = function (modelos){
 
         producto.belongsTo(modelos.intensidad, {   
           as: "intensidad",
           foreignKey: "intensidad_id"
         });
-    
-    }
 
-    producto.associate = function (modelos){
+
 
         producto.hasMany(modelos.venta, {   
           as: "venta",
           foreignKey: "producto_id"
-        });
+          });
+    
+    
+    
+
+
+  
       }
     
      

@@ -10,7 +10,7 @@ let db = require('../database/models')
 
 
 function loggedMw (req,res,next) {
-
+try {
     //Por default el usuario no esta logeado
     res.locals.isLogged = false
 
@@ -35,8 +35,12 @@ function loggedMw (req,res,next) {
     }
 
     next()
+   
+
 
     })
+
+    } catch(error) {res.send(error)}
 }
 
 module.exports = loggedMw;

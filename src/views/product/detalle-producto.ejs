@@ -41,13 +41,13 @@
             <div id="caracteristicas-producto">
                 <h2 class="nombre-producto"><%= producto.nombre %></h2>
                 <hr id="under-line-producto">
-                <p><strong>País:</strong> <%= producto.pais %></p>
-                <p><strong>Cuerpo:</strong> <%= producto.cuerpo %></p>
-                <p><strong>Intensidad:</strong> <%= producto.intensidad %></p>
+                <p><strong>País:</strong> <%= producto.pais.nombre %></p>
+                <p><strong>Cuerpo:</strong> <%= producto.cuerpo.nombre %></p>
+                <p><strong>Intensidad:</strong> <%= producto.intensidad.nombre %></p>
                 <!-- <p><strong>Notas:</strong> Chocolate, cítricos</p> -->
             </div>
             <div id="opciones-producto">
-                <p class="opciones">TAMAÑO</p>
+                <!-- <p class="opciones">TAMAÑO</p>
                 <select class= "select-opciones" name="tamano">
                     <option value="500gr">500 GR</option>
                     <option value="1kg">1 KG</option>
@@ -63,7 +63,7 @@
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="2">3</option>
-                </select>
+                </select> -->
                 <p id="precio-producto">PRECIO: $ <%= producto.precio %></p>
                 <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button><br><br>
                 <a href = "/product/editar-producto/<%= producto.id %>"><button type="button" id="boton-agregar-carrito">EDITAR</button></a><br><br>
@@ -88,16 +88,16 @@
     </div>
     <div id="productos-relacionados">
         <div class="un-producto-relacionado">
-            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-2.png" width = "300px" height="300px"></img>
-            <p class="nombre-producto-relacionado">MEXICO BLEND</p>
+            <a href="/product/detalle-producto/<%= productos[0].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[0].imagen %>" width = "300px" height="300px"></img></a>
+            <p class="nombre-producto-relacionado"><%= productos[0].nombre %></p>
         </div>
         <div class="un-producto-relacionado">
-            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-3.png" width = "300px" height="300px"></img>
-            <p class="nombre-producto-relacionado">COLOMBIA INTENSO</p>
+            <a href="/product/detalle-producto/<%= productos[1].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[1].imagen %>" width = "300px" height="300px"></img></a>
+            <p class="nombre-producto-relacionado"><%= productos[1].nombre %></p>
         </div>
         <div class="un-producto-relacionado">
-            <img class="imagen-producto-relacionado" src = "/img/cafe-bolsa-4.png" width = "300px" height="300px"></img>
-            <p class="nombre-producto-relacionado">COLOMBIA SUAVE</p>
+            <a href="/product/detalle-producto/<%= productos[2].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[2].imagen %>" width = "300px" height="300px"></img></a>
+            <p class="nombre-producto-relacionado"><%= productos[2].nombre %></p>
         </div>
     </div>
     <%-include('../partials/footer') %>

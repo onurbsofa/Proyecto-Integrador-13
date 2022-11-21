@@ -27,6 +27,6 @@ function usuarioData(sequelize, dataTypes){
     return usuario;
     
     }
-    
+        
     module.exports = usuarioData
     

@@ -10,10 +10,7 @@ const session = require('express-session');
 //Trae los errores de express-validator
 const {validationResult, body} = require('express-validator');
 
-//JSON ya NO lo usamos - ELIMINAR
-//Lee los usuarios del JSON y los guarda en la variable users
-// const usersFilePath = path.join(__dirname, '/../database/usersDataBase.json');
-// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 
 
 //base de datos
@@ -113,35 +110,7 @@ crearUsuario : (req,res) => {
             admin : 1
           
           }).then(function(x){
-          
-
-            //JSON - ELIMINAR cuando funcionen las bases de datos
-
-        //verifica si ya existe al menos un usuario en nuestra base de datos, si no existe le asigna el id 1 al que creamos, si existe le asigna el id que sigue
-        // if (users[0]){
-        // var idNuevoUser = (users[users.length-1].id)+1;
-        // } else {
-        // idNuevoUser = 1
-        // }
-
-
-        // let nuevoUser = {
-        //     "id" : parseInt(idNuevoUser),
-        //     "name" : datos.name,
-        //     "email" : datos.email,
-        //     "imagen": req.file.filename,
-        //     "password" : bcrypt.hashSync(datos.password,10),
-
-        // };
-
         
-
-        // //escribe el nuevo user en el JSON
-        // users.push(nuevoUser);
-        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "), 'utf-8');
-        
-
-        //Eliminar codigos de JSON HASTA ACA, NO LO DE ABAJO !!!
         
 
         //reenvia al login para que el usuario inicie session

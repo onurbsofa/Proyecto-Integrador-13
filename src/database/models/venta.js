@@ -19,23 +19,15 @@ function ventaData(sequelize, Datatypes){
 
     venta.associate = function (modelos){
 
-        venta.belongsTo(modelos.detalle_venta, {   
-          as: "detalle_venta",
-          foreignKey: "detalle_venta_id"
-        });
-    
-    }
-
-    venta.associate = function (modelos){
+        // venta.belongsTo(modelos.detalle_venta, {   
+        //   as: "detalle_venta",
+        //   foreignKey: "detalle_venta_id"
+        // });
 
         venta.belongsTo(modelos.usuario, {   
           as: "usuario",
           foreignKey: "usuario_id"
         });
-    
-    }
-
-    venta.associate = function (modelos){
 
         venta.belongsTo(modelos.producto, {   
           as: "producto",
@@ -43,6 +35,7 @@ function ventaData(sequelize, Datatypes){
         });
     
     }
+
      
     return venta
 

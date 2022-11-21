@@ -1,14 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/productos.json');
-const productosJson = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+//base de datos
+let db = require('../database/models')
 
 const mainControllers = {
 
 
 index : (req,res) => {
-    res.render('index' ,{productosJson});
+    db.producto.findAll()// busca todos los registros del modelo con ese alias 
+			.then(function(producto){
+				res.render('index', {producto:producto})//comparte la variable del modelo con la vista
+			})
+
 },
 
 carritoCompras : (req,res) =>{
