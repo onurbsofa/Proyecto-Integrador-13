@@ -31,7 +31,7 @@ const validateRegister = [
         .custom(async (email, {req}) => {
             const emailIngresado = req.body.email;
 
-            db.usuario.findAll().then(function(usersDb){
+            await db.usuario.findAll().then(function(usersDb){
 
 
             const encontrado = usersDb.find(element => element.email == emailIngresado);

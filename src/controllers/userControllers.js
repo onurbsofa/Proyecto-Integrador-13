@@ -92,8 +92,9 @@ registroUsuario : (req,res) =>{
 },
 
 //Se encarga del funcionamiento del form de registro de un usuario nuevo
-crearUsuario : (req,res) => {
-    
+crearUsuario : async (req,res) => {
+    try {
+
     let datos = req.body;
     
     let errors = validationResult(req)
@@ -119,19 +120,17 @@ crearUsuario : (req,res) => {
         })
    } else {
 
-        console.log('no anda!!!!!!!!')
-
         //elimina la imagen que acabamos de subir
         if(req.file) {
 		    fs.unlinkSync(__dirname+'/../../public/img/'+req.file.filename);
 		}
         
-        console.log('redireccion!!')
        //devuelve la misma vista con los mensajes de error
        return res.render('user/registro', {errors : errors.mapped(), old: req.body})
 
       	
    }
+} catch (error){res.send(error)}
 
 
 
