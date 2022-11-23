@@ -87,18 +87,15 @@
         <hr class="under-line">
     </div>
     <div id="productos-relacionados">
+
+        <% if (productos.length > 3) {largo = 3} else {largo = productos.length}  %>
+        <% for (let i = 0 ; i < largo ; i++) { %>
         <div class="un-producto-relacionado">
-            <a href="/product/detalle-producto/<%= productos[0].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[0].imagen %>" width = "300px" height="300px"></img></a>
-            <p class="nombre-producto-relacionado"><%= productos[0].nombre %></p>
+            <a href="/product/detalle-producto/<%= productos[i].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[i].imagen %>" width = "300px" height="300px"></img></a>
+            <p class="nombre-producto-relacionado"><%= productos[i].nombre %></p>
         </div>
-        <div class="un-producto-relacionado">
-            <a href="/product/detalle-producto/<%= productos[1].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[1].imagen %>" width = "300px" height="300px"></img></a>
-            <p class="nombre-producto-relacionado"><%= productos[1].nombre %></p>
-        </div>
-        <div class="un-producto-relacionado">
-            <a href="/product/detalle-producto/<%= productos[2].id %>"><img class="imagen-producto-relacionado" src = "/img/<%= productos[2].imagen %>" width = "300px" height="300px"></img></a>
-            <p class="nombre-producto-relacionado"><%= productos[2].nombre %></p>
-        </div>
+        <% } %>
+      
     </div>
     <%-include('../partials/footer') %>
 </body>
