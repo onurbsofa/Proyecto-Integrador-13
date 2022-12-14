@@ -17,7 +17,7 @@
   <body>
       <!--Include Header-->
       <%- include('../partials/header') %>      
-  </body>
+  
   <main>
   <div class="container">   
         <h2>Nuevo Producto</h2>
@@ -27,19 +27,22 @@
             <!-- nombre del producto -->
             <div class="col-xl-6 col-xs-12";>
               <label for="validationDefault01" class="form-label">Nuevo Producto</label>
-              <input type="text" class="form-control" name="nombre" id="validationDefault01" value="Nombre del producto" required>
+              <input type="text" class="form-control" name="nombre" id="validationDefault01" required>
+              <span></span>
             </div>
 
             <!-- imagen del producto -->
               <div class="col-xl-6 col-xs-12">
                 <label for="formFile" class="form-label">Selecciona la imagen del producto</label>
                 <input class="form-control" type="file" name="imagen" id="formFile" required>
+                <span></span>
               </div>
 
             <!-- precio del producto -->  
             <div class="col-xl-6 col-xs-12">
               <label for="validationDefault04" class="form-label">Precio</label>
               <input type="number" class="form-control" name="precio" id="validationDefault04" required>
+              <span></span>
             </div>
 
             <!-- cantidad de producto -->
@@ -56,6 +59,7 @@
                 <option value="mexico">mexico</option>
                 <option value="brasil">brasil</option>
               </select>
+              <span></span>
               <!-- <input type="text" class="form-control" name="pais" id="validationDefault01" required> -->
             </div>
 
@@ -66,6 +70,7 @@
                 <option value="simple">simple</option>
                 <option value="medio">medio</option>
                 <option value="complejo">complejo</option>
+                <span></span>
               </select>
               <!-- <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required> -->
             </div>
@@ -78,13 +83,15 @@
                 <option value="medio">medio</option>
                 <option value="intenso  ">intenso</option>
               </select>
+              <span></span>
               <!-- <input type="text" class="form-control" name="intensidad" id="validationDefault01" required> -->
             </div>
 
             <!-- descripcion del producto -->
             <div class="col-6">
                 <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto </label>
-                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows=""></textarea>
+                <textarea class="form-control" name="descripcion" id="des" rows=""></textarea>
+                <span></span>
               </div>
             
             <!-- boton submit -->
@@ -96,5 +103,8 @@
   </div> 
   </main>
   <!-- <%-include('../partials/footer-wiliam') %> -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <script src="/js/validacionProductos.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+</body>
   </html>

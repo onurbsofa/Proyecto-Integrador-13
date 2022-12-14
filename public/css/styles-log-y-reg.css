@@ -37,6 +37,7 @@ form{
     background-color: black;
     border: #a6a6a6 inset 0.15rem;
     color: #f3f2f2;
+    display: inblock;
 }
 
 .celda{
@@ -108,4 +109,17 @@ form{
     top: 260px;
     text-decoration: none;
     color: white;
+}
+
+/* Validaciones en Frontend */
+
+.invalido{
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+
+}
+
+.error {
+    color: red;
+    display: block;
 }

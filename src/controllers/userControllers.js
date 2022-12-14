@@ -22,6 +22,7 @@ const userControllers = {
 
 //render de la vista del form de login del usuario
 login :  (req,res) =>{
+    
     console.log('HOLA')
     res.render('user/login');  
 },
