@@ -35,7 +35,7 @@
                         <label for="email">Email<span class="asterisco">*</span></label>
                         <div class="input-group flex-nowrap">
                         </div>
-                        <input type="email" name="email" class="form-control input" placeholder="Ejemplo@mail.com" id="email" required>
+                        <input type="email" name="email" class="form-control input" placeholder="Ejemplo@mail.com" id="email" >
                         <span></span>
                         <% if (locals.errors && errors.email) { %>
                             <p class="feedback"><%= errors.email.msg %></p>
@@ -46,7 +46,7 @@
                     <div class="celda" id="campos_contraseña">       <!-- FALTA AGREGAR OPCION VER CONTRASEÑA -->
                         <label for="contraseña">Contraseña<span class="asterisco">*</span></label>
                         <div>
-                            <input type="password" id="contraseña" class="form-control input" name="password" placeholder="Ej: Contraseña123" required>
+                            <input type="password" id="contraseña" class="form-control input" name="password" placeholder="Ej: Contraseña123" >
                             <span></span>
                             <% if (locals.errors && errors.password) { %>
                                 <p class="feedback"><%= errors.password.msg %></p>
