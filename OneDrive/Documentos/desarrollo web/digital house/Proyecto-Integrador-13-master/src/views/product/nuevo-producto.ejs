@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles-nuevo-producto.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <title>Tostao Coffee to go</title>
+
+</head>
+  <body>
+      <!--Include Header-->
+      <%- include('../partials/header') %>      
+  
+  <main>
+  <div class="container">   
+        <h2>Nuevo Producto</h2>
+        <h3> Ingrese los siguientes datos</h3> 
+        <form class="row" action="nuevo-producto" method="POST" enctype="multipart/form-data">
+
+            <!-- nombre del producto -->
+            <div class="col-xl-6 col-xs-12";>
+              <label for="validationDefault01" class="form-label">Nuevo Producto</label>
+              <input type="text" class="form-control" name="nombre" id="validationDefault01" required>
+              <span></span>
+            </div>
+
+            <!-- imagen del producto -->
+              <div class="col-xl-6 col-xs-12">
+                <label for="formFile" class="form-label">Selecciona la imagen del producto</label>
+                <input class="form-control" type="file" name="imagen" id="formFile" required>
+                <span></span>
+              </div>
+
+            <!-- precio del producto -->  
+            <div class="col-xl-6 col-xs-12">
+              <label for="validationDefault04" class="form-label">Precio</label>
+              <input type="number" class="form-control" name="precio" id="validationDefault04" required>
+              <span></span>
+            </div>
+
+            <!-- cantidad de producto -->
+            <!-- <div class="col-xl-6 col-xs-12">
+                <label for="validationDefault05" class="form-label">Cantidad en el inventario</label>
+                <input type="number" class="form-control" name="cantidad"  id="validationDefault05" required>
+              </div> -->
+            
+            <!-- pais del producto -->
+            <div class="col-6 col-xs-12">
+              <label for="validationDefault01" class="form-label">Pais</label>
+              <select id="validationDefault01" name="pais" required class="form-control">
+                <option value="colombia">colombia</option>
+                <option value="mexico">mexico</option>
+                <option value="brasil">brasil</option>
+              </select>
+              <span></span>
+              <!-- <input type="text" class="form-control" name="pais" id="validationDefault01" required> -->
+            </div>
+
+            <!-- cuerpo del producto -->
+            <div class="col-6">
+              <label for="validationDefault01" class="form-label">Cuerpo</label>
+              <select id="validationDefault01" name="cuerpo" required class="form-control">
+                <option value="simple">simple</option>
+                <option value="medio">medio</option>
+                <option value="complejo">complejo</option>
+                <span></span>
+              </select>
+              <!-- <input type="text" class="form-control" name="cuerpo" id="validationDefault01" required> -->
+            </div>
+
+            <!-- intensidad del producto -->
+            <div class="col-6">
+              <label for="validationDefault01" class="form-label">Intensidad</label>
+              <select id="validationDefault01" name="intensidad" required class="form-control">
+                <option value="suave">suave</option>
+                <option value="medio">medio</option>
+                <option value="intenso  ">intenso</option>
+              </select>
+              <span></span>
+              <!-- <input type="text" class="form-control" name="intensidad" id="validationDefault01" required> -->
+            </div>
+
+            <!-- descripcion del producto -->
+            <div class="col-6">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto </label>
+                <textarea class="form-control" name="descripcion" id="des" rows=""></textarea>
+                <span></span>
+              </div>
+            
+            <!-- boton submit -->
+            <div class="col-12">
+              <button class="" type="submit">Crear producto</button>
+            </div>
+          </form>
+         </div>
+  </div> 
+  </main>
+  <!-- <%-include('../partials/footer-wiliam') %> -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <script src="/js/validacionProductos.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+</body>
+  </html>

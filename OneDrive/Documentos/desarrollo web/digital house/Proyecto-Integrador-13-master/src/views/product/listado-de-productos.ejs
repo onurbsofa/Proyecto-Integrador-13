@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tostao Productos</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2617d08959.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/styles-productos.css">
+        <link rel="stylesheet" href="/css/styles-footer.css">
+        <!--Links del header-->
+        <link href="/css/styles-header.css" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="/img/favicon.ico">
+  
+ </head>
+  <body>
+    
+    <!--Include Header-->
+    <%- include('../partials/header') %>
+    <div class="encabezado"><h1>Listado De Productos</h1></div>
+    
+        <div class="container-catalogo">
+              <div class="catalogo">
+                <h4>Catálogo</h4>
+                <ul>
+                  <li><button class="boton-catalogo">Todos</button></li>
+                  <li><button class="boton-catalogo">Café en grano de Mexico</button></li>
+                  <li><button class="boton-catalogo">Café en grano de Brasil</button></li>
+                  <li><button class="boton-catalogo">Café en grano de Colombia</button></li>
+                  <li><button class="boton-catalogo">Bebida frias</button></li>
+                </ul>
+                <div class="ayuda-catalogo">
+                  <a href="">Ayuda Catálogo</a>
+                </div>
+              </div>
+        </div>
+
+
+
+
+      <section  id = "lista-productos" class="productos-conteiner">
+          <% for(let i = 0; i < producto.length; i++){ %> 
+        <div class="producto-tarjeta">
+          <div class="precio">
+            <span><%= producto[i].precio %>$</span>
+          </div>
+          <img class="productoimg" src = "/img/<%= producto[i].imagen %>" width = "300px" height="300px"></img>
+          <div class="nombre-conteiner"><p class="nombre-producto-recomendado"><%= producto[i].nombre %></p></div>
+         <div class="botones-producto">
+            <a href="detalle-producto/<%= producto[i].id %>"><button class="boton-vermas">Ver más</button></a>
+            <button id="boton-agregar-carrito" class="boton-carrito"> <i class=" fa-solid fa-cart-shopping fa-2x"></i></button>
+         </div>
+        </div>
+          <% } %>
+      </section>
+    <script></script>
+  </div>
+  
+    <%-include('../partials/footer') %>
+  </body>
+</html>

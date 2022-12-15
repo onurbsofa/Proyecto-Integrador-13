@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tostao Coffe to go </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
+    <link rel="stylesheet" href="/css/styles-home.css">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+    <!--Links del header-->
+    <link href="/css/styles-header.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--Include Header-->
+    <%- include('./partials/header') %>
+
+    
+    <main>
+      <!--Banner-->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/banner-principal.png" class="d-block w-100" alt="primer banner de producto">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/banner.svg" class="d-block w-100" alt="segundo banner">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--productos recomendados-->
+          <div class="container products-wrapper">
+            <div class="row">
+
+                  <% for(let i = 0; i < producto.length; i++){ %>
+
+                    <div class="col-12 col-sm-6 col-lg-3 ">
+                      <section class="product-box">
+
+                        <img class="productoimg" src = "/img/<%= producto[i].imagen %>" width = "300px" height="300px"></img>
+                        <p class="nombre-producto-recomendado"><%= producto[i].nombre %></p>
+                        <a href="product/detalle-producto/<%= producto[i].id %>"><button class="boton-recomendado">Ver más</button></a>
+                      </section>
+                    </div>
+                        
+                        <% } %>
+            </div>
+          </div>
+
+       <!--sección recetas-->
+        <section class="recetas">
+            <div id="recetas-titulo">
+                <h2 class="nombre-recetas">Recetas y preparaciones</h2>
+            </div> 
+          <div id="recetas-preparaciones">
+            <div class="recetas-cafe">
+                <img class="recetasimg" src = "/img/receta1.jpg" width = "500px" height="300px"></img>
+                <p class="descripcion-receta">CAFÉ HELADO - 8 RECETAS </p> 
+            </div>
+            <div class="recetas-cafe">
+                <img class="recetasimg" src = "/img/receta2.jpg" width = "500px" height="300px"></img>
+                <p class="descripcion-receta">BATIDO DE CAFÉ Y CHOCOLATE</p>
+            </div>
+            <div class="recetas-cafe">
+                <p class="texto-receta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illo placeat odio repellat aliquam provident minus, consequatur ab laudantium assumenda, cum quo aliquid temporibus eos tempore molestias sed? Aspernatur, cum? </p>
+                <button class="boton-recetas">Ver más</button>
+            </div>
+        </div>    
+                            
+        </section>
+    </main>      
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+</body>
+<!--include footer-->
+<%-include('./partials/footer') %>
+</html>
