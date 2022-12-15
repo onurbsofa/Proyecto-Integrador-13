@@ -1,0 +1,26 @@
+<header id="header">
+    <nav>
+        <div id="menu">
+            <ul class="menu-left">
+                <i id="burger-menu" class="fa-solid fa-bars fa-2x"></i>
+                <li class="item"><a href="/" title="Home">Home</a></li>
+                <!-- <li class="item"><a href="#header" title="Nosotros">Nosotros</a></li>
+                <li class="item"><a href="#header" title="Contacto">Contacto</a></li> -->
+                <li class="item"><a href="/product/listado-de-productos" title="Contacto">Productos</a></li>
+                <% if (locals.isLogged) { %>
+                <li class="item"><a href="/product/nuevo-producto" title="Contacto">Agregar Producto</a></li>
+                <% } %>
+            </ul>
+            <h2 class="brand">TOSTAO</h2>
+            <ul class="menu-right">
+                <% if (locals.isLogged) { %>
+                <li class="item"><a href="" title="Login">Hola, <%= locals.usuarioLogeado.nombre %></a></li>
+                <li class="item"><a href="/user/logout" title="Login">Logout</a></li>
+                <% } else { %>
+                <li class="item"><a href="/user/login" title="Login">Login</a></li>
+                <% } %>
+                <a href="/carrito-compras" title="Carrito"><li class="fa-solid fa-cart-shopping fa-2x"></li></a>
+            </ul>
+        </div>
+    </nav>
+</header>

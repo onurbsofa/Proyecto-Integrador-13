@@ -1,0 +1,22 @@
+
+
+#header {background:#000;color:#fff; padding-top: 10px; font-size: 12px;}
+
+#menu{display: flex; width: 100%; justify-content: space-between; align-items: center;}
+#menu .menu-left{padding-left: 0px;}
+#menu .menu-right{padding-right: 20px;}
+#menu li{display:inline-block;}
+#menu li a{display:none;color:#fff;font:300 'Jost';text-transform: uppercase;padding:10px 20px;transition:300ms ease-out; text-decoration: none ;}
+#menu li a:hover{color:#DB780F;}
+.brand{color: #DB780F; width: auto;}
+.fa-cart-shopping {margin-left: 0px; padding-left: 0px; color: #fff;}
+.fa-cart-shopping:hover {color: #DB780F;}
+ul {padding-inline-start: 0px;} 
+
+@media (min-width : 600px) {
+    #menu li a{display:block;}
+    #burger-menu{display: none;}
+    .brand{display: none;}     
+}
+
+
