@@ -35,7 +35,7 @@
     <!--Producto pincipal-->
     <div id="seccion-producto-principal">
         <div class="seccion-producto-principal-componente-1">
-            <img id="imagen-producto-principal" src = "/img/<%= producto.imagen %>"></img>
+            <img id="imagen-producto-principal" src = "/img/<%= producto.imagen %>">
         </div>
         <div class="seccion-producto-principal-componente-2">
             <div id="caracteristicas-producto">
@@ -64,7 +64,7 @@
                     <option value="2">2</option>
                     <option value="2">3</option>
                 </select> -->
-                <p id="precio-producto">PRECIO: $ <%= producto.precio %></p>
+                <p >PRECIO:$<small id="precio-producto"><%= producto.precio %></small></p>
                 <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button><br><br>
                 <a href = "/product/editar-producto/<%= producto.id %>"><button type="button" id="boton-agregar-carrito">EDITAR</button></a><br><br>
             
@@ -97,6 +97,7 @@
         <% } %>
       
     </div>
+    <script src="/js/detalle-de-producto.js"></script>
     <%-include('../partials/footer') %>
 </body>
 </html>

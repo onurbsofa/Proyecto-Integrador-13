@@ -14,89 +14,110 @@
     <!--Links del header-->
     <link href="/css/styles-header.css" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/13e38d5bb6.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
-<body>
-    <!--Include Header-->
-    <%- include('./partials/header') %>
+    <body>
+            <!--Include Header-->
+            <%- include('./partials/header') %>
+            <div class="conteinerProductos">
 
-<!-- titulo principal-->
-<producto class="pro1">            
-    <h1>CARRITO DE COMPRAS</h1>            
-</producto>
-
-<!-- Banner-->
-<div class="banner">
-<img src="/img/banner-tostado.jpg">
-</div>
-
-<!-- tabla 1-->
-<main class="pro2">
-<div class="grid-container">
-    <div class="item1">
-        <b><div class="title">Tamaño</div></b>
-        <b><div class="title">Precio</div></b>
-        <b><div class="title">Cantidad</div></b>
-        <b><div class="title">Subtotal</div></b>
-        <b><div class="title">Molienda</div></b>
-   </div>
-  <div class="item2">	
-        <div class="mains">
-            <img class="imgPrdo"src = "/img/cafe-bolsa-1.png"> </img>
-            <div class="descProd">
-              <h2 class="nombre-producto">COLOMBIA BLEND</h2>                        
-              <div><p><strong>País:</strong> Colombia</p></div>
-              <div><p><strong>Cuerpo:</strong> Medio</p></div>
-              <div><p><strong>Intensidad:</strong> Media</p></div>
-              <div><p><strong>Notas:</strong> Chocolate, cítricos</p></div>
             </div>
-        </div>
-        <div class="mains">
-            <img class="imgPrdo"src = "/img/cafe-bolsa-1.png"> </img>
-            <div class="descProd">
-                <h2 class="nombre-producto">COLOMBIA BLEND</h2>                        
-                <div><p><strong>País:</strong> Colombia</p></div>
-                <div><p><strong>Cuerpo:</strong> Medio</p></div>
-                <div><p><strong>Intensidad:</strong> Media</p></div>
-                <div><p><strong>Notas:</strong> Chocolate, cítricos</p></div>
-            </div>
-        </div>
-        <div class="mains">
-            <img class="imgPrdo"src = "/img/cafe-bolsa-1.png"> </img>
-            <div class="descProd">
-                <h2 class="nombre-producto">COLOMBIA BLEND</h2>                        
-                <div><p><strong>País:</strong> Colombia</p></div>
-                <div><p><strong>Cuerpo:</strong> Medio</p></div>
-                <div><p><strong>Intensidad:</strong> Media</p></div>
-                <div><p><strong>Notas:</strong> Chocolate, cítricos</p></div>
-            </div>
-        </div>
-    </div> 
-    <div class="item3 flexClass">	
-        <div class="mains">1 lb</div>
-        <div class="mains">Grano</div>
-        <div class="mains">$50</div>
-        <div class="mains">2</div>
-        <div class="mains">$100</div>				
-    </div> 
-    <div class="item5 flexClass">	
-        <div class="mains2">1 lb</div>
-        <div class="mains2">Grano</div>
-        <div class="mains2">$50</div>
-        <div class="mains2">2</div>
-        <div class="mains2">$100</div>	
-    </div> 
-    <div class="item6 flexClass">	
-        <div class="mains3">1 lb</div>
-        <div class="mains3">Grano</div>
-        <div class="mains3">$50</div>
-        <div class="mains3">2</div>
-        <div class="mains3">$100</div>				
-    </div> 
-</div>
-</main>     
+        <!-- START SECTION SHOPPING CART -->
+        <section class="shopping-cart">
+            <div class="container">
+                <h1 class="text-center">CARRITO</h1>
+                <button class="btn btn-danger botonEliminarCarrito" type="button">Borrar Carrito</button>
+                <hr>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="shopping-cart-header">
+                            <h6>Producto</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="shopping-cart-header">
+                            <h6 class="text-truncate">Precio</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="shopping-cart-header">
+                            <h6>Cantidad</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- ? START SHOPPING CART ITEMS -->
+                <div class="shopping-cart-items shoppingCartItemsContainer">
+                </div>
+                <!-- ? END SHOPPING CART ITEMS -->
 
-    
-     <%-include('./partials/footer') %>
-</body>
+                <!-- START TOTAL -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="shopping-cart-total d-flex align-items-center">
+                            <p class="mb-0">Total</p>
+                            <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+                            <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                                data-delay="2000">
+                                <div class="toast-header">
+                                    <span>✅</span>
+                                    <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="toast-body text-white">
+                                    Se aumentó correctamente la cantidad
+                                </div>
+                            </div>
+                            <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                                data-target="#comprarModal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END TOTAL -->
+
+                <!-- START MODAL COMPRA -->
+                <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Pronto recibirá su pedido</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MODAL COMPRA -->
+
+
+            </div>
+
+        </section>
+        <!-- END SECTION SHOPPING CART -->
+
+
+        <!-- SCRIPTS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script src="/js/carrito.js"></script>
+        <%-include('./partials/footer') %>
+    </body>
 </html>
