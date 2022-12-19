@@ -8,6 +8,10 @@ botonAgregarCarrito.addEventListener("click", agregarProductoCarritoCliked);
 
 
 function agregarProductoCarritoCliked(event){
+    Swal.fire(
+        'Añadido Al Carrito!',
+        'success'
+      )
     const boton = event.target;
     const producto = boton.closest('#seccion-producto-principal');
     
