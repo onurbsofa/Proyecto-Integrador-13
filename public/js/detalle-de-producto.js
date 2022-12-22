@@ -1,6 +1,6 @@
 
 let carrito =  JSON.parse(localStorage.getItem("carrito")) || [] ;
-
+//si el local esta vacio
 const botonAgregarCarrito = document.querySelector("#boton-agregar-carrito");
 botonAgregarCarrito.addEventListener("click", agregarProductoCarritoCliked);
 
