@@ -181,9 +181,11 @@ const productControllers = {
 			.findAll()
 			.then(productos => {
 				return res.status(200).json({
-					total: productos.length,
-					data:productos,
-					status: 200
+					count: productos.length + 1,
+					countByCategoryPais : productos.pais,
+					countByCategoryCuerpo : productos.cuerpo,
+					countByCategoryIntensidad : productos.intensidad,
+					products: productos
 				})
 			})
 	}

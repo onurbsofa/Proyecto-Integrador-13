@@ -50,6 +50,9 @@ router.get('/vista-usuario', userControllers.vistaUsuario);
 //api de usuarios
 router.get('/APIusuarios', userControllers.endpoint);
 
+//api de usuarios
+router.get('/APIusuarios/:id', userControllers.buscarPorId);
+
 
 
 

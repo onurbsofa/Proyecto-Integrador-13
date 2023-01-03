@@ -152,14 +152,24 @@ endpoint: (req,res) => {
     db.usuario
         .findAll()
         .then(usuarios => {
-            return res.status(200).json({
-                total: usuarios.length,
-                data:usuarios,
-                status: 200
+            return res.json({
+                count: usuarios.length + 1,
+                users:usuarios,
+            })
+        })
+},
+
+buscarPorId: (req,res) => {
+    db.usuario
+        .findByPk(req.params.id)
+        .then(usuario => {
+            return res.json({
+                nombre: usuario.nombre,
+                mail:usuario.email,
             })
         })
 }
-
+    
 }
 
 

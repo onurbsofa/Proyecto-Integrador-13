@@ -38,5 +38,7 @@ router.post('/borrar-producto/:id', productControllers.borrarProducto);
 
 //api de productos
 router.get('/APIproductos', productControllers.endpoint);
+//api de productos
+/* router.get('/APIproductos/:id', productControllers.buscarPorId); */
 
 module.exports = router;
