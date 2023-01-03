@@ -188,8 +188,21 @@ const productControllers = {
 					products: productos
 				})
 			})
-	}
+	},
 
+	buscarPorId: (req,res) => {
+		db.producto
+			.findByPk(req.params.id)
+			.then(producto => {
+				if(producto == null){
+					return res.json('no existen productos con ese id')
+				}else{
+					return res.json({
+						data: producto
+					})
+				}
+			})
+	}
 }
 
 module.exports = productControllers;
