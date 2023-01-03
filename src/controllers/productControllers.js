@@ -176,6 +176,18 @@ const productControllers = {
 
 	},
 
+	endpoint: (req,res) => {
+		db.producto
+			.findAll()
+			.then(productos => {
+				return res.status(200).json({
+					total: productos.length,
+					data:productos,
+					status: 200
+				})
+			})
+	}
+
 }
 
 module.exports = productControllers;

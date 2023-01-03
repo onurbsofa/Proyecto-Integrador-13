@@ -36,4 +36,7 @@ router.put('/editar-producto/:id', uploadFile.single('imagen'), productControlle
 //router.get('/borrar-producto', productControllers.nuevoProducto);
 router.post('/borrar-producto/:id', productControllers.borrarProducto);
 
+//api de productos
+router.get('/APIproductos', productControllers.endpoint);
+
 module.exports = router;

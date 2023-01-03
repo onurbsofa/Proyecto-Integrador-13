@@ -147,6 +147,17 @@ list : (req,res) => {
 
 recContra : (req,res) =>{
     res.render('user/rec_contra');            
+},
+endpoint: (req,res) => {
+    db.usuario
+        .findAll()
+        .then(usuarios => {
+            return res.status(200).json({
+                total: usuarios.length,
+                data:usuarios,
+                status: 200
+            })
+        })
 }
 
 }

@@ -47,7 +47,8 @@ router.get('/list', userControllers.list);
 //vista del usuario
 router.get('/vista-usuario', userControllers.vistaUsuario);
 
-
+//api de usuarios
+router.get('/APIusuarios', userControllers.endpoint);
 
 
 
