@@ -3,7 +3,7 @@
 #header {background:#000;color:#fff; padding-top: 10px; font-size: 12px;}
 
 #menu{display: flex; width: 100%; justify-content: space-between; align-items: center;}
-#menu .menu-left{padding-left: 0px;}
+#menu .menu-left{padding-left: 15px;}
 #menu .menu-right{padding-right: 20px;}
 #menu li{display:inline-block;}
 #menu li a{display:none;color:#fff;font:300 'Jost';text-transform: uppercase;padding:10px 20px;transition:300ms ease-out; text-decoration: none ;}
@@ -13,10 +13,86 @@
 .fa-cart-shopping:hover {color: #DB780F;}
 ul {padding-inline-start: 0px;} 
 
-@media (min-width : 600px) {
-    #menu li a{display:block;}
-    #burger-menu{display: none;}
-    .brand{display: none;}     
+@media screen and (min-width : 600px) {
+    #menu li a{
+        display:block;}
+    #burger-menu{
+        display: none;}
+    .brand{
+        display: inline-block; }
 }
+@media screen and (max-width : 599px) {
+       
+    #menu {
+    height:0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background:#000;
+    transition: 0.5s;
+    display:block;
+    overflow: hidden;
+}
+#menu.active {
+    height: 30%;
+}
+#menu  ul{
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0  ;
+   
+}
+#menu.active ul {
+    opacity: 1;
+}
+
+    #menu li{display:block}
+    #menu li a{  display:block;
+                color:#fff;
+                font:300 'Jost';
+                text-transform: uppercase;
+                transition:300ms ease-out; 
+                text-decoration: none ;}
+    #menu a{padding: 10px 10px;}
+
+    #menu .menu-right{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        margin-top: 4px;
+        ;}
+    #menu .menu-left{
+        padding-left: 0px;
+        margin-bottom: 10px;
+        margin-top: 4px;
+    }
+
+#burger-menu{
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 10px;
+    
+   
+}
+
+    .brand{
+        display: none; }
+
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
 
