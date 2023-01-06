@@ -178,13 +178,10 @@ const productControllers = {
 
 	endpoint: (req,res) => {
 		db.producto
-			.findAll()
+			.findAll({include : [{association : "pais"}, {association : "cuerpo"}, {association : "intensidad"}]})
 			.then(productos => {
 				return res.status(200).json({
-					count: productos.length + 1,
-					countByCategoryPais : productos.pais,
-					countByCategoryCuerpo : productos.cuerpo,
-					countByCategoryIntensidad : productos.intensidad,
+					count: productos.length,
 					products: productos
 				})
 			})
@@ -201,6 +198,17 @@ const productControllers = {
 						data: producto
 					})
 				}
+			})
+	},
+
+	paisesApi: (req,res) => {
+		db.pais
+			.findAll({include : [{association : "producto"}]})
+			.then(pais => {
+				return res.status(200).json({
+					count: pais.length,
+					paises: pais
+				})
 			})
 	}
 }

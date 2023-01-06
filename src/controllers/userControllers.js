@@ -153,7 +153,7 @@ endpoint: (req,res) => {
         .findAll()
         .then(usuarios => {
             return res.json({
-                count: usuarios.length + 1,
+                count: usuarios.length,
                 users:usuarios,
             })
         })

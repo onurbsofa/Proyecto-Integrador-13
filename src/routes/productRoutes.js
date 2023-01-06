@@ -41,4 +41,9 @@ router.get('/APIproductos', productControllers.endpoint);
 //api de productos
  router.get('/APIproductos/:id', productControllers.buscarPorId);
 
+ //api de paises
+router.get('/APIpaises', productControllers.paisesApi);
+
+ 
+
 module.exports = router;

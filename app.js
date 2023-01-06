@@ -28,8 +28,8 @@ app.set('views',path.join(__dirname,'./src/views'));
 
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('Servidor corriendo en el puerto 3000');
+app.listen(process.env.PORT || 3001, function() {
+    console.log('Servidor corriendo en el puerto 3001');
 });
 
 app.use("/", mainRoutes);
