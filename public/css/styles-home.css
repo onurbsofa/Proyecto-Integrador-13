@@ -36,6 +36,7 @@ body {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgb(249, 203, 36);
 
 }
+
   .productoimg {
     transition: width 2s, height 2s, transform 2s;
   }
@@ -78,6 +79,13 @@ body {
     color: #593527;
     display: flexbox;
   
+  }
+
+  .nombre-recetas {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 40px;
   }
 
 #recetas-preparaciones {

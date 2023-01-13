@@ -36,7 +36,7 @@ nombre.addEventListener("blur", (e) => {
     const field = e.target;
     const fieldValue = e.target.value;
     const regex = new RegExp(/^.{20,50}$/);
-    if (fieldValue.trim().length < 20 && !regex.test(fieldValue)) {
+    if (fieldValue.trim().length < 5 && !regex.test(fieldValue)) {
       setErrors("El nombre debe de contener minimo 5 caracteres", field);
     } else {
       setErrors("", field, false);
