@@ -29,16 +29,21 @@ router.get('/nuevo-producto',usuarioMiddleware, productControllers.nuevoProducto
 router.post('/nuevo-producto',usuarioMiddleware, uploadFile.single('imagen') , productControllers.crear); 
 
 //Editar Producto
-router.get('/editar-producto/:id', productControllers.editarProducto);
+router.get('/editar-producto/:id',usuarioMiddleware, productControllers.editarProducto);
 router.put('/editar-producto/:id', uploadFile.single('imagen'), productControllers.actualizarProducto); 
 
 //Borrar Producto
 //router.get('/borrar-producto', productControllers.nuevoProducto);
-router.post('/borrar-producto/:id', productControllers.borrarProducto);
+router.post('/borrar-producto/:id',usuarioMiddleware, productControllers.borrarProducto);
 
 //api de productos
 router.get('/APIproductos', productControllers.endpoint);
 //api de productos
  router.get('/APIproductos/:id', productControllers.buscarPorId);
+
+ //api de paises
+router.get('/APIpaises', productControllers.paisesApi);
+
+ 
 
 module.exports = router;

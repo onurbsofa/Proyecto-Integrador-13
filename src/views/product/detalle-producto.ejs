@@ -66,11 +66,13 @@
                 </select> -->
                 <p >PRECIO:$<small id="precio-producto"><%= producto.precio %></small></p>
                 <button type="button" id="boton-agregar-carrito">AGREGAR AL CARRITO</button><br><br>
+                <% if (locals.isLogged) { %>
                 <a href = "/product/editar-producto/<%= producto.id %>"><button type="button" id="boton-agregar-carrito">EDITAR</button></a><br><br>
             
                 <form action = "/product/borrar-producto/<%= producto.id %>" method="post">
                     <button type="submit" id="boton-agregar-carrito">BORRAR</button>
                 </form>
+                <% } %>
             </div>
         </div>
     </div>
