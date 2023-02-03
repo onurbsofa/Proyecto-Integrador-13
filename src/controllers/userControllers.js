@@ -48,7 +48,8 @@ processLogin : (req, res) =>{
     //promise de la base de datos, creamos la variable usersDb (array de usuarios) para luego iterar y encontrar el usuario requerido
     db.usuario.findAll().then(function(usersDb){
 
-    if (errors.isEmpty()) {
+    if (errors.isEmpty()) 
+    {
 
         
         for(let i = 0; i < usersDb.length; i++){    
